@@ -186,7 +186,6 @@ main {
 .learn-english__prefix {
     background-color: #F6F6F6;
     border-radius: 12px;
-    padding: 10px 29px;
     font-weight: 500;
     font-size: 20px;
     -webkit-border-radius: 12px;
@@ -195,7 +194,6 @@ main {
     -o-border-radius: 12px;
 }
 .learn-english__name {
-    padding: 10px 29px;
     font-weight: 600;
     font-size: 21px;
 }
@@ -208,7 +206,7 @@ main {
 .learn-english__list {
     margin-top: 23px;
     width: fit-content;
-    padding: 3px 40px 13px 13px;
+    padding: 3px 68px 13px 13px;
     border-radius: 12px;
     background-color: #F2F2F2B2;
     -webkit-border-radius: 12px;
@@ -223,5 +221,39 @@ main {
     font-weight: 400;
     font-size: 17px;
     display: flex;
-    gap: 12px;
+    gap: 10px;
+}
+.test-proposition {
+    width: 80%;
+    margin-top: 170px !important;
+    margin: 0 auto;
+}
+.test-proposition__card {
+    margin-right: 28px;
+    box-shadow: 3px 2px 15px 0px #0000001C;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    padding: 50px 90px 90px 90px;
+}
+.test-proposition__title {
+    line-height: 39.28px;
+    word-spacing: 5px;
+    width: 70%;
+    font-weight: 600;
+    font-size: 21px;
+}
+.test-proposition__title__blue {
+    color: #385AD2;
+}
+.test-proposition_subtitle {
+    line-height: 31.8px;
+    margin-top: 20px;
+    width: 88%;
+    color: #696968;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.test-proposition__button {
+    margin-top: 50px;
 }
