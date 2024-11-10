@@ -23,11 +23,15 @@ blockquote:before, blockquote:after,
 q:before, q:after {content: ''; content: none;}
 table {border-collapse: collapse; border-spacing: 0;}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 :root {
     --var-primary: #385AD2;
     --var-primary-light: #4f71ee;
 }
-
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
 nav {
     display: flex; 
     justify-content: space-between; 
@@ -81,3 +85,84 @@ nav {
 .btn-transparrent:hover {
     background-color: transparent;
 }
+main {
+    position: relative;
+    margin-top: 112px;
+}
+.main__content {
+    position: relative;
+    z-index: 2;
+}
+.title {
+    font-weight: 700;
+    font-size: 51px;
+}
+.doings {
+    margin-top: 29px;
+    display: flex;
+    gap: 45px;
+}
+.doings__item {
+    gap: 14px;
+    align-items: center;
+    display: flex;
+}
+.doings__item img {
+    width: 24px;
+}
+.doings__item h4 {
+    font-weight: bold;
+    font-size: 20px;
+}
+.hr {
+    margin: 55px 0px 30px;
+    background-color: #00000014;
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+.propositions {
+    gap: 47px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.propositions__item {
+    padding: 35px 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.bg-circle {
+    top: -25px;
+    left: 95px;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    background-color: #3859d243;
+    filter: blur(120px);
+    -webkit-filter: blur(120px);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.propositions__item p {
+    width: 53%;
+}
+.bg-circle-blue {
+    height: 400px;
+    width: 400px;
+    left: 310px;
+    background-color: #4491e934;
+}
+.prefix
