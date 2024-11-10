@@ -184,6 +184,7 @@ main {
 }
 
 .learn-english__prefix {
+    padding: 10px 20px;
     background-color: #F6F6F6;
     border-radius: 12px;
     font-weight: 500;
@@ -194,6 +195,7 @@ main {
     -o-border-radius: 12px;
 }
 .learn-english__name {
+    padding: 10px 20px;
     font-weight: 600;
     font-size: 21px;
 }
@@ -224,7 +226,7 @@ main {
     gap: 10px;
 }
 .test-proposition {
-    width: 80%;
+    width: 85%;
     margin-top: 170px !important;
     margin: 0 auto;
 }
@@ -238,7 +240,7 @@ main {
 .test-proposition__title {
     line-height: 39.28px;
     word-spacing: 5px;
-    width: 70%;
+    width: 77%;
     font-weight: 600;
     font-size: 21px;
 }
@@ -248,7 +250,7 @@ main {
 .test-proposition_subtitle {
     line-height: 31.8px;
     margin-top: 20px;
-    width: 88%;
+    width: 92%;
     color: #696968;
     font-weight: 400;
     font-size: 17px;
