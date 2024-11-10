@@ -165,4 +165,63 @@ main {
     left: 310px;
     background-color: #4491e934;
 }
-.prefix
+.learn-english {
+    margin-top: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.learn-english__content {
+    width:800px;
+}
+.learn-english__content p{
+    margin-top: 16px;
+}
+.learn-english__block {
+    display: flex;
+    gap: 21px;
+}
+
+.learn-english__prefix {
+    background-color: #F6F6F6;
+    border-radius: 12px;
+    padding: 10px 29px;
+    font-weight: 500;
+    font-size: 20px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.learn-english__name {
+    padding: 10px 29px;
+    font-weight: 600;
+    font-size: 21px;
+}
+.learn-english__subprefix {
+    color: #696968;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.learn-english__list {
+    margin-top: 23px;
+    width: fit-content;
+    padding: 3px 40px 13px 13px;
+    border-radius: 12px;
+    background-color: #F2F2F2B2;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.learn-english__items {
+    margin-top: 20px;
+    color: #696968;
+    font-weight: 400;
+    font-size: 17px;
+    display: flex;
+    gap: 12px;
+}
