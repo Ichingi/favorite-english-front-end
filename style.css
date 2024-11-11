@@ -32,6 +32,10 @@ table {border-collapse: collapse; border-spacing: 0;}
     margin: 0 auto;
     width: 80%;
 }
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
 nav {
     display: flex; 
     justify-content: space-between; 
@@ -139,6 +143,10 @@ main {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
+.propositions__item p{
+    font-weight: 500;
+    line-height: 18.18px;
+}
 .bg-circle {
     top: -25px;
     left: 95px;
@@ -166,7 +174,7 @@ main {
     background-color: #4491e934;
 }
 .learn-english {
-    margin-top: 130px;
+    margin-top: 165px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -232,10 +240,14 @@ main {
 }
 .test-proposition__card {
     margin-right: 28px;
-    box-shadow: 3px 2px 15px 0px #0000001C;
-    border-radius: 12px;
+    box-shadow: 3px 4px 104.6px 0px #0000001C;
+    border-radius: 27px;
     background-color: #FFFFFF;
     padding: 50px 90px 90px 90px;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    -ms-border-radius: 27px;
+    -o-border-radius: 27px;
 }
 .test-proposition__title {
     line-height: 39.28px;
@@ -258,4 +270,56 @@ main {
 
 .test-proposition__button {
     margin-top: 50px;
+}
+.slider {
+    user-select: none;
+    margin-top: 173px !important;
+    overflow-x: hidden;
+    padding: 45px 0;
+    cursor: grab;
+    margin: auto;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+}
+.slide__content {
+    align-items: center;
+    display: flex ;
+    gap: 17px;
+}
+.slide {
+    border-radius: 22px;
+    box-shadow: 0px 4px 91.5px -3px #00000021;
+    min-width: 300px;
+    margin: 10px;
+    background: #FFFFFF;
+    padding: 45px;
+    text-align: center;
+    font-size: 1.2em;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+}
+.slide__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 21px;
+}
+.slide__subtitle {
+    height: 50%;
+    width: 90%;
+    text-align: left;
+    display: block;
+    color: #696968;
+    margin-top: 23px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25.5px;
 }
