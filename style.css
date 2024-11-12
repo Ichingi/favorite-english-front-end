@@ -72,6 +72,7 @@ nav {
 }
 
 .button {
+    height: fit-content;
     color: white;
     background-color: var(--var-primary);
     padding: 15px 35px;
@@ -225,7 +226,7 @@ main {
     -o-border-radius: 12px;
 }
 
-.learn-english__items {
+.list__items {
     margin-top: 20px;
     color: #696968;
     font-weight: 400;
@@ -273,14 +274,14 @@ main {
 }
 .slider {
     user-select: none;
-    margin-top: 173px !important;
     overflow-x: hidden;
     padding: 45px 0;
     cursor: grab;
-    margin: auto;
+    margin: 131px auto;
 }
 
 .slider-track {
+    justify-content: space-around;
     display: flex;
     transition: transform 0.2s ease;
     -webkit-transition: transform 0.2s ease;
@@ -290,7 +291,7 @@ main {
 }
 .slide__content {
     align-items: center;
-    display: flex ;
+    display: flex;
     gap: 17px;
 }
 .slide {
@@ -308,7 +309,7 @@ main {
     -o-border-radius: 22px;
 }
 .slide__title {
-    text-align: center;
+    text-align: left;
     font-weight: 600;
     font-size: 21px;
 }
@@ -322,4 +323,109 @@ main {
     font-weight: 400;
     font-size: 17px;
     line-height: 25.5px;
+}
+.how-much {
+    font-weight: 600;
+    font-size: 30px;
+}
+.price {
+    gap: 100px;
+    width: 80%;
+    margin-top: 160px !important;
+    margin: 0 auto;
+    display: flex;
+}
+.price-content {
+    width: 40%;
+}
+.price-lessons__info {
+    margin-top: 40px;
+}
+.price-privileges p{
+    line-height: 25.5px;
+    margin-top: 80px;
+}
+.price-list {
+    margin-top: 10px;
+    padding: 21px;
+    background-color: #f5f5f5;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    box-shadow: 4px 4px 100px 0px #0000001f;
+}
+.price-button {
+    margin-top: 35px;
+}
+.price-memo span {
+    color: #696968;
+}
+.price-card__name {
+    font-weight: 600;
+    font-size: 21px;
+}
+.price-cards {
+    width: 60%;
+    position: relative;
+}
+.price-card {
+    width: 300px;
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+    box-shadow: 0px 4px 91.5px -3px #00000021;
+}
+.price-card__lessons {
+    margin-top: 30px;
+    justify-content: space-between;
+    display: flex;
+    background-color: black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 12px 20px;
+}
+.price-card__lessons span{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+.prices {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.price-item {
+    line-height: 28.5px;
+}
+.price-item p {
+    color: #696968;
+}
+.price-item span{
+    font-weight: 600;
+    font-size: 19px;
+}
+.price-card__hr{
+    margin-top: 30px;
+}
+.card-feature {
+    color: #696968;
+}
+.price-card__lessons__right {
+    background-color: #385AD2;
+}
+.right-card {
+    position: absolute;
+    bottom: -150px;
+    right: 1px;
 }

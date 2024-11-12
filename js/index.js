@@ -24,7 +24,24 @@ slider.addEventListener('mouseup', () => {
 slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
+
     const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX); // теперь движение будет идти за курсором
-    sliderTrack.style.transform = `translateX(${scrollLeft + walk}px)`;
+    const walk = x - startX;
+
+    // Получаем ширину слайдера и ширину дорожки
+    const sliderWidth = slider.offsetWidth;
+    const trackWidth = sliderTrack.scrollWidth;
+
+    // Ограничиваем прокрутку
+    let newTransform = scrollLeft + walk;
+    const maxTransform = -(trackWidth - sliderWidth); // Максимально допустимое смещение влево
+
+    // Проверяем границы
+    if (newTransform > 0) {
+        newTransform = 0; // Не даем выйти за начало
+    } else if (newTransform < maxTransform) {
+        newTransform = maxTransform; // Не даем выйти за конец
+    }
+
+    sliderTrack.style.transform = `translateX(${newTransform}px)`;
 });
