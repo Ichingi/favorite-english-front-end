@@ -45,3 +45,4 @@ slider.addEventListener('mousemove', (e) => {
 
     sliderTrack.style.transform = `translateX(${newTransform}px)`;
 });
+
