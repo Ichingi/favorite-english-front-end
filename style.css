@@ -201,16 +201,13 @@ body {
     }
 
     .learn-english__name {
-        font-size: 18px;
+        font-size: 19px !important;
+        padding: 10px 0 !important;
     }
 
     .test-proposition__title {
         line-height: 31.28px !important;
         font-size: 18px !important;
-    }
-
-    .learn-english__name {
-        padding: 10px 0 !important;
     }
 }
 a {
