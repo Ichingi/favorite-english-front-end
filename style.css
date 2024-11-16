@@ -208,6 +208,10 @@ body {
         line-height: 31.28px !important;
         font-size: 18px !important;
     }
+
+    .learn-english__name {
+        padding: 10px 0;
+    }
 }
 a {
     text-decoration: none;
