@@ -8,7 +8,7 @@ slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
-    scrollLeft = sliderTrack.offsetLeft;
+    scrollLeft = slider.scrollLeft; // Виправлено: використовуємо scrollLeft для відстеження положення скролу
 });
 
 slider.addEventListener('mouseleave', () => {
@@ -28,19 +28,7 @@ slider.addEventListener('mousemove', (e) => {
     const x = e.pageX - slider.offsetLeft;
     const walk = x - startX;
 
-    const sliderWidth = slider.offsetWidth;
-    const trackWidth = sliderTrack.scrollWidth;
-
-    let newTransform = scrollLeft + walk;
-    const maxTransform = -(trackWidth - sliderWidth);
-
-    if (newTransform > 0) {
-        newTransform = 0;
-    } else if (newTransform < maxTransform) {
-        newTransform = maxTransform;
-    }
-
-    sliderTrack.style.transform = `translateX(${newTransform}px)`;
+    slider.scrollLeft = scrollLeft - walk; // Виправлено: змінюємо scrollLeft для прокрутки
 });
 
 // Додамо підтримку сенсорних екранів
@@ -49,7 +37,7 @@ slider.addEventListener('touchstart', (e) => {
     isDown = true;
     slider.classList.add('active');
     startX = e.touches[0].pageX - slider.offsetLeft;
-    scrollLeft = sliderTrack.offsetLeft;
+    scrollLeft = slider.scrollLeft; // Виправлено для сенсорів
 });
 
 slider.addEventListener('touchend', () => {
@@ -63,19 +51,7 @@ slider.addEventListener('touchmove', (e) => {
     const x = e.touches[0].pageX - slider.offsetLeft;
     const walk = x - startX;
 
-    const sliderWidth = slider.offsetWidth;
-    const trackWidth = sliderTrack.scrollWidth;
-
-    let newTransform = scrollLeft + walk;
-    const maxTransform = -(trackWidth - sliderWidth);
-
-    if (newTransform > 0) {
-        newTransform = 0;
-    } else if (newTransform < maxTransform) {
-        newTransform = maxTransform;
-    }
-
-    sliderTrack.style.transform = `translateX(${newTransform}px)`;
+    slider.scrollLeft = scrollLeft - walk; // Виправлено для сенсорів
 });
 
 function toggleMenu() {
