@@ -28,25 +28,56 @@ slider.addEventListener('mousemove', (e) => {
     const x = e.pageX - slider.offsetLeft;
     const walk = x - startX;
 
-    // Получаем ширину слайдера и ширину дорожки
     const sliderWidth = slider.offsetWidth;
     const trackWidth = sliderTrack.scrollWidth;
 
-    // Ограничиваем прокрутку
     let newTransform = scrollLeft + walk;
-    const maxTransform = -(trackWidth - sliderWidth); // Максимально допустимое смещение влево
+    const maxTransform = -(trackWidth - sliderWidth);
 
-    // Проверяем границы
     if (newTransform > 0) {
-        newTransform = 0; // Не даем выйти за начало
+        newTransform = 0;
     } else if (newTransform < maxTransform) {
-        newTransform = maxTransform; // Не даем выйти за конец
+        newTransform = maxTransform;
     }
 
     sliderTrack.style.transform = `translateX(${newTransform}px)`;
 });
 
-  
+// Додамо підтримку сенсорних екранів
+
+slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = sliderTrack.offsetLeft;
+});
+
+slider.addEventListener('touchend', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = x - startX;
+
+    const sliderWidth = slider.offsetWidth;
+    const trackWidth = sliderTrack.scrollWidth;
+
+    let newTransform = scrollLeft + walk;
+    const maxTransform = -(trackWidth - sliderWidth);
+
+    if (newTransform > 0) {
+        newTransform = 0;
+    } else if (newTransform < maxTransform) {
+        newTransform = maxTransform;
+    }
+
+    sliderTrack.style.transform = `translateX(${newTransform}px)`;
+});
+
 function toggleMenu() {
     const menu = document.querySelector('.nav__items');
     menu.classList.toggle('show');
