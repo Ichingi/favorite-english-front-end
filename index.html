@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <div>
-
     <header>
         <nav>
-            <ul class="nav__items">
-                <li class="nav__item"><a href="">Головна</a></li>
-                <li class="nav__item"><a href="">Блог</a></li>
-                <li class="nav__item"><a href="">Про платформу</a></li>
-                <li class="nav__item"><a href="">Контакти</a></li>
-            </ul>
+            <div class="menu">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <ul class="nav__items">
+                    <li class="nav__item"><a href="">Головна</a></li>
+                    <li class="nav__item"><a href="">Блог</a></li>
+                    <li class="nav__item"><a href="">Про платформу</a></li>
+                    <li class="nav__item"><a href="">Контакти</a></li>
+                </ul>
+            </div>
             <div class="buttons">
-                <a href="" class="button">Зареєструватися</a>
-                <a href="" class="button btn-transparrent">Увійти</a>
+                <a href="" class="button btn-adaptive">Зареєструватися</a>
+                <a href="" class="button btn-transparrent btn-adaptive">Увійти</a>
             </div>
         </nav>
     </header>
@@ -218,31 +220,33 @@
     <footer>
         <div class="footer-elements">
             <div class="footer-content">
-                <div class="footer-content__list">
-                    <div class="list__items footer-list__items">
-                        <img src="emojies/location.svg" alt="location">
-                        <div class="email-adress">
-                            <span>Adress:</span>
+                <div class="footer-mobile">
+                    <div class="footer-content__list">
+                        <div class="list__items footer-list__items">
+                            <img src="emojies/location.svg" alt="location">
+                            <div class="email-adress">
+                                <span>Adress:</span>
+                            </div>
+                        </div>
+                        <div class="list__items footer-list__items">
+                            <img src="emojies/Call.svg" alt="call">
+                            <span>Tel : +9229341037</span>
+                        </div>
+                        <div class="list__items footer-list__items">
+                            <img src="emojies/email.svg" alt="email">
+                            <span>Email: info@onlearn.com</span>
                         </div>
                     </div>
-                    <div class="list__items footer-list__items">
-                        <img src="emojies/Call.svg" alt="call">
-                        <span>Tel : +9229341037</span>
-                    </div>
-                    <div class="list__items footer-list__items">
-                        <img src="emojies/email.svg" alt="email">
-                        <span>Email: info@onlearn.com</span>
-                    </div>
-                </div>
-                <div class="footer-additionally">
-                    <div class="footer-additionally__items">
-                        <p>Categories</p>
-                        <a href="#">Відгуки</a>
-                    </div>
-                    <div class="footer-additionally__items">
-                        <p>Links</p>
-                        <a href="#">Про нас</a>
-                        <a href="#">Блог</a>
+                    <div class="footer-additionally">
+                        <div class="footer-additionally__items">
+                            <p>Categories</p>
+                            <a href="#">Відгуки</a>
+                        </div>
+                        <div class="footer-additionally__items">
+                            <p>Links</p>
+                            <a href="#">Про нас</a>
+                            <a href="#">Блог</a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-content__search">
