@@ -210,7 +210,7 @@ body {
     }
 
     .learn-english__name {
-        padding: 10px 0;
+        padding: 10px 0 !important;
     }
 }
 a {
