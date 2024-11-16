@@ -46,3 +46,8 @@ slider.addEventListener('mousemove', (e) => {
     sliderTrack.style.transform = `translateX(${newTransform}px)`;
 });
 
+  
+function toggleMenu() {
+    const menu = document.querySelector('.nav__items');
+    menu.classList.toggle('show');
+}
