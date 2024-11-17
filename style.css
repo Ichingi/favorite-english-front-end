@@ -35,7 +35,17 @@ body {
 } */
 .container {
     margin: 0 auto;
-    width: 80%; 
+    width: 70%; 
+}
+@media(max-width:1930px){
+    .price-cards {
+        width: 49% !important;
+    }
+}
+@media(max-width:1530px){
+    .container {
+        width: 80% !important;
+    }
 }
 @media(max-width:1200px){
     .container {
@@ -58,8 +68,18 @@ body {
     }
 }
 @media(max-width:960px){
-    .price-content {
+    /* .price-content {
         display: none;
+    } */
+    .price-privileges, .price-button {
+        display: none;
+    }
+    .price {
+        gap: 31px !important;
+        flex-direction: column;
+    }
+    .price-content {
+        width: 100% !important;
     }
     .nav__items {
         display: none !important;
@@ -139,6 +159,10 @@ body {
     }
 }
 @media(max-width:680px){
+    .test-proposition__title {
+        width: 100% !important;
+    }
+    
     .footer-content__search {
         width: 61% !important;
     }
@@ -177,7 +201,7 @@ body {
     }
 
     .test-proposition__card {
-        padding: 61px 55px !important;
+        padding: 26px 42px 46px !important;
     }
 
     .footer-mobile {
@@ -185,7 +209,7 @@ body {
     }
 
     .learn-english__block {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 7px !important;
     }
     .learn-english__prefix {
@@ -229,6 +253,10 @@ body {
     main {
         margin-top: 80px !important;
     }
+
+    .learn-english__name {
+        font-weight: 500 !important;
+    }
 }
 @media(max-width:438px){
     .list__items.footer-list__items img {
@@ -248,7 +276,34 @@ body {
 
     .test-proposition__title {
         line-height: 31.28px !important;
-        font-size: 18px !important;
+        font-size: 19px !important;
+        width: 102% !important;
+    }
+
+    .test-proposition_subtitle {
+        line-height: 26.8px !important;
+        font-size: 16px !important;
+    }
+
+    .button {
+        font-size: 15px !important;
+    }
+
+    .learn-english__prefix {
+        padding: 8px 12px !important;
+        font-size: 16px !important;
+    }
+
+    .learn-english__name {
+        font-size: 18px;
+    }
+
+    .list__items p {
+        font-size: 15px;
+    }
+
+    .learn-english__list {
+        padding: 5px 21px !important;
     }
 }
 a {
@@ -266,7 +321,7 @@ nav {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    width: 80%;
+    /* width: 80%; */
     margin: 30px auto;
 }
 
@@ -421,6 +476,7 @@ main {
 }
 .learn-english__block {
     display: flex;
+    align-items: center;
     gap: 21px;
 }
 
@@ -465,6 +521,10 @@ main {
     font-size: 17px;
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+.list__items p {
+    margin-top: 0 !important;
 }
 .test-proposition {
     width: 60%;
@@ -513,6 +573,8 @@ main {
 }
 
 .slider-track {
+    width: 97%;
+    margin: 0 auto;
     justify-content: space-around;
     display: flex;
     transition: transform 0.2s ease;
