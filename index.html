@@ -22,7 +22,7 @@
                 </div>
                 <div class="buttons">
                     <a href="" class="button btn-adaptive">Зареєструватися</a>
-                    <a href="" class="button btn-transparrent btn-adaptive">Увійти</a>
+                    <a onclick="openModal('login')" href="#" class="button btn-transparrent btn-adaptive">Увійти</a>
                 </div>
             </nav>
         </header>
@@ -258,6 +258,31 @@
         </div>
     </footer>
 
+    <!-- Модальне вікно -->
+    <div id="login" class="modal" data-modal="login">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login')"><ion-icon name="close-outline"></ion-icon></span>
+            <h2>Вхід</h2>
+            <div class="modal-inputs">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+            </div>
+            <div class="modal__bottom-section">
+                <a href="#">Відновити пароль?</a>
+                <a href="" class="button">Увійти</a>
+            </div>
+            <div class="modal-some-information">
+                <p>Або увійдіть через</p>
+                <div class="buttons">
+                    <button class="icon-btn"><img src="icons/apple.png" alt="Apple" width="14"></button>
+                    <button class="icon-btn google-btn"><img src="icons/google.png" alt="Google" width="14"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
