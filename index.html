@@ -21,7 +21,7 @@
                     </ul>
                 </div>
                 <div class="buttons">
-                    <a href="" class="button btn-adaptive">Зареєструватися</a>
+                    <a onclick="openModal('registration')" href="#" class="button btn-adaptive">Зареєструватися</a>
                     <a onclick="openModal('login')" href="#" class="button btn-transparrent btn-adaptive">Увійти</a>
                 </div>
             </nav>
@@ -258,7 +258,7 @@
         </div>
     </footer>
 
-    <!-- Модальне вікно -->
+    <!-- Модальне вікно авторизації -->
     <div id="login" class="modal" data-modal="login">
         <div class="modal-content">
             <span class="close" onclick="closeModal('login')"><ion-icon name="close-outline"></ion-icon></span>
@@ -273,6 +273,31 @@
             </div>
             <div class="modal-some-information">
                 <p>Або увійдіть через</p>
+                <div class="buttons">
+                    <button class="icon-btn"><img src="icons/apple.png" alt="Apple" width="14"></button>
+                    <button class="icon-btn google-btn"><img src="icons/google.png" alt="Google" width="14"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно реєстрації -->
+    <div id="registration" class="modal" data-modal="registration">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registration')"><ion-icon name="close-outline"></ion-icon></span>
+            <h2>Реєстрація</h2>
+            <div class="modal-inputs">
+                <input type="text" placeholder="Ім'я" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Підтвердження паролю" required>
+            </div>
+            <div class="modal__bottom-section">
+                <a href="#">Є аккаунт? Увійти</a>
+                <a href="" class="button">Зареєструватись</a>
+            </div>
+            <div class="modal-some-information">
+                <p>Або через</p>
                 <div class="buttons">
                     <button class="icon-btn"><img src="icons/apple.png" alt="Apple" width="14"></button>
                     <button class="icon-btn google-btn"><img src="icons/google.png" alt="Google" width="14"></button>
