@@ -388,7 +388,11 @@ nav {
 .buttons {
     display: flex;
 }
-
+.btn-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 .button {
     height: fit-content;
     color: white;

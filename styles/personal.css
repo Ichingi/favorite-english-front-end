@@ -1,14 +1,3 @@
-a {
-    text-decoration: none;
-}
-li {
-    list-style-type: none;
-    text-decoration: none;
-}
-input {
-    outline: none;
-    border: none;
-}
 header {
     background-color: white;
 }
@@ -69,9 +58,6 @@ header {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-footer {
-    position: absolute;
-}
 .header-bottom {
     display: flex;
     gap: 10px;
@@ -79,4 +65,31 @@ footer {
     justify-content: center;
     align-items: start;
     padding: 12px 0;
+}
+.main-header{
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main-header__card {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 21px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
+}
+.take-gift {
+    width: 55%;
+    justify-content: center;
+}
+.lessons-balance {
+    width: 37%;
+    justify-content: space-between;
+    padding: 12px 32px;
 }
