@@ -8,7 +8,7 @@ slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
-    scrollLeft = sliderTrack.offsetLeft;
+    scrollLeft = slider.scrollLeft; // Виправлено: використовуємо scrollLeft для відстеження положення скролу
 });
 
 slider.addEventListener('mouseleave', () => {
@@ -28,21 +28,33 @@ slider.addEventListener('mousemove', (e) => {
     const x = e.pageX - slider.offsetLeft;
     const walk = x - startX;
 
-    // Получаем ширину слайдера и ширину дорожки
-    const sliderWidth = slider.offsetWidth;
-    const trackWidth = sliderTrack.scrollWidth;
-
-    // Ограничиваем прокрутку
-    let newTransform = scrollLeft + walk;
-    const maxTransform = -(trackWidth - sliderWidth); // Максимально допустимое смещение влево
-
-    // Проверяем границы
-    if (newTransform > 0) {
-        newTransform = 0; // Не даем выйти за начало
-    } else if (newTransform < maxTransform) {
-        newTransform = maxTransform; // Не даем выйти за конец
-    }
-
-    sliderTrack.style.transform = `translateX(${newTransform}px)`;
+    slider.scrollLeft = scrollLeft - walk; // Виправлено: змінюємо scrollLeft для прокрутки
 });
 
+// Додамо підтримку сенсорних екранів
+
+slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft; // Виправлено для сенсорів
+});
+
+slider.addEventListener('touchend', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = x - startX;
+
+    slider.scrollLeft = scrollLeft - walk; // Виправлено для сенсорів
+});
+
+function toggleMenu() {
+    const menu = document.querySelector('.nav__items');
+    menu.classList.toggle('show');
+}

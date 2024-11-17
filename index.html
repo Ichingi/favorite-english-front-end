@@ -4,108 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorite English</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<div>
-
-    <header>
-        <nav>
-            <ul class="nav__items">
-                <li class="nav__item"><a href="">Головна</a></li>
-                <li class="nav__item"><a href="">Блог</a></li>
-                <li class="nav__item"><a href="">Про платформу</a></li>
-                <li class="nav__item"><a href="">Контакти</a></li>
-            </ul>
-            <div class="buttons">
-                <a href="" class="button">Зареєструватися</a>
-                <a href="" class="button btn-transparrent">Увійти</a>
-            </div>
-        </nav>
-    </header>
+<body>
     <div сlass="wrapper"></div>
-        <div class="container">
-            <main>
-                <span class="bg-circle"></span>
-                <span class="bg-circle bg-circle-blue"></span>
-                <div class="main__content">
-                    <h1 class="title">Вивчай англійську.</h1>
-                    <div class="doings">
-                        <div class="doings__item">
-                            <h4>Дивись фільми на англійській</h4>
-                            <img src="emojies/eye.svg" alt="Eye">
-                        </div>
-                        <div class="doings__item">
-                            <h4>Розмовляй англійською</h4>
-                            <img src="emojies/speak.svg" alt="Speak">
-                        </div>
-                        <div class="doings__item">
-                            <h4>Думай англійською</h4>
-                            <img src="emojies/brain.svg" alt="Brain">
-                        </div>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="menu">
+                    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                    <ul class="nav__items">
+                        <li class="nav__item"><a href="">Головна</a></li>
+                        <li class="nav__item"><a href="">Блог</a></li>
+                        <li class="nav__item"><a href="">Про платформу</a></li>
+                        <li class="nav__item"><a href="">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <a href="" class="button btn-adaptive">Зареєструватися</a>
+                    <a href="" class="button btn-transparrent btn-adaptive">Увійти</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <span class="bg-circle"></span>
+            <span class="bg-circle bg-circle-blue"></span>
+            <div class="main__content">
+                <h1 class="title">Вивчай англійську.</h1>
+                <div class="doings">
+                    <div class="doings__item">
+                        <h4>Дивись фільми на англійській</h4>
+                        <img src="emojies/eye.svg" alt="Eye">
                     </div>
-                    <span class="hr"></span>
-
-                    <div class="propositions">
-                        <div class="propositions__item">
-                            <p>
-                                Запишись на безкоштовний
-                                пробний урок та отримай бонуси
-                            </p>
-                            <a href="#" class="button">Записатися</a>
-                        </div>
-                        <div class="propositions__item">
-                            <p>
-                                Чому вчитися з нами
-                                ефективніше, ніж із репетитором 
-                            </p>
-                            <a href="#" class="button btn-transparrent">Дізнатися</a>
-                        </div>
+                    <div class="doings__item">
+                        <h4>Розмовляй англійською</h4>
+                        <img src="emojies/speak.svg" alt="Speak">
+                    </div>
+                    <div class="doings__item">
+                        <h4>Думай англійською</h4>
+                        <img src="emojies/brain.svg" alt="Brain">
                     </div>
                 </div>
-            </main>
-            <section class="learn-english">
-                <div class="learn-english__content">
-                    <div class="learn-english__block">
-                        <span class="learn-english__prefix">
-                            Freedom
-                        </span>
-                        <span class="learn-english__name">
-                            вчити англійську як хочеш
-                        </span>
+                <span class="hr"></span>
+
+                <div class="propositions">
+                    <div class="propositions__item">
+                        <p>
+                            Запишись на безкоштовний
+                            пробний урок та отримай бонуси
+                        </p>
+                        <a href="#" class="button">Записатися</a>
                     </div>
-                    <p class="learn-english__subprefix">Ми — не просто онлайн-школа з репетиторами, а екосистема вивчення англійської:</p>    
-
-                    <div class="learn-english__list">
-                        <ul>
-                            <div class="list__items">    
-                                <img src="emojies/backhand.svg" alt="backhand"> 
-                                <li>навчайся хоч з ноуту, хоч зі смартфону</li>
-                            </div>
-                            <div class="list__items">
-                                <img src="emojies/backhand.svg" alt="backhand"> 
-                                <li> вивчай мову з perfect teacher match</li>
-                            </div>
-
-                            <div class="list__items">
-                                <img src="emojies/backhand.svg" alt="backhand"> 
-                                <li> додатково прокачуйся на спікінг-клабах, онлайн-курсах й інших активностях</li>
-                            </div>
-                        </ul>
+                    <div class="propositions__item">
+                        <p>
+                            Чому вчитися з нами
+                            ефективніше, ніж із репетитором 
+                        </p>
+                        <a href="#" class="button btn-transparrent">Дізнатися</a>
                     </div>
                 </div>
-            </section>    
-            <div class="test-proposition">
-                <div class="test-proposition__card">
-                    <div class="test-proposition__items">
-                        <p class="test-proposition__title">Круто, якщо ти знаєш свій рівень англійської. А якщо ні — <span class="test-proposition__title__blue">ми поруч ;)</span></p>
-                    </div>
-                    <div class="test-proposition__items">
-                        <p class="test-proposition_subtitle">Проведемо для тебе пробне заняття, де познайомимося, пройдемо тест на рівень англійської та визначимо твої цілі на навчання.</p>
-                    </div>
-                        <div class="test-proposition__button"><a href="" class="button">Пройти Тест</a></div>
-                </div>        
+            </div>
+        </main>
+        <section class="learn-english">
+            <div class="learn-english__content">
+                <div class="learn-english__block">
+                    <span class="learn-english__prefix">
+                        Freedom
+                    </span>
+                    <span class="learn-english__name">
+                        вчити англійську як хочеш
+                    </span>
+                </div>
+                <p class="learn-english__subprefix">Ми — не просто онлайн-школа з репетиторами, а екосистема вивчення англійської:</p>    
+
+                <div class="learn-english__list">
+                    <ul>
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand"> 
+                            <p>навчайся хоч з ноуту, хоч зі смартфону</p>
+                        </li>
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand"> 
+                            <p> вивчай мову з perfect teacher match</p>
+                        </li>
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand"> 
+                            <p> додатково прокачуйся на спікінг-клабах, онлайн-курсах й інших активностях</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>    
+        <div class="test-proposition">
+            <div class="test-proposition__card">
+                <div class="test-proposition__items">
+                    <p class="test-proposition__title">Круто, якщо ти знаєш свій рівень англійської. А якщо ні — <span class="test-proposition__title__blue">ми поруч ;)</span></p>
+                </div>
+                <div class="test-proposition__items">
+                    <p class="test-proposition_subtitle">Проведемо для тебе пробне заняття, де познайомимося, пройдемо тест на рівень англійської та визначимо твої цілі на навчання.</p>
+                </div>
+                    <div class="test-proposition__button"><a href="" class="button">Пройти тест</a></div>
             </div>        
-        </div>
+        </div>        
+    </div>
         <section class="slider">
             <div class="slider-track">
                 <div class="slide">
@@ -141,31 +142,33 @@
         <section class="price">
             <div class="price-content">
                 <p class="how-much">How much?</p>
-                    <div class="price-lessons__info">
-                        <div class="list__items">
-                            <img src="emojies/clock.svg" alt="clock">
-                            <li>Урок – 50 хвилин</li>
-                        </div>
-                        <div class="list__items">
-                            <img src="emojies/okay.svg" alt="okay">
-                            <li>Є оплата частинами</li>
-                        </div>
-                    </div>
-                    <div class="price-privileges">
-                        <p>Окрім занять з тічером, тобі доступні:</p>
-                        <div class="price-list">
-                            <div class="list__items">
-                                <img src="emojies/backhand.svg" alt="backhand">
-                                <li>Support superheroes, які вирішать будь-яке питання</li>
-                            </div>
-                            <div class="list__items">
-                                <img src="emojies/backhand.svg" alt="backhand">
-                                <li>Спікінг-клаби і self-study-курси — безкоштовно у пакетах від 20 занять</li>
-                            </div>
-                        </div>
-                        <p class="price-memo">І пам’ятай:<span> більше занять — нижча ціна. А ще — більше бонусів.</span></p>
-                    </div> 
-                <div class="price-button"><a href="" class="button">Спробувати безкоштовно</a></div>
+                <ul class="price-lessons__info">
+                    <li class="list__items">
+                        <img src="emojies/clock.svg" alt="clock">
+                        <p>Урок – 50 хвилин</p>
+                    </li>
+                    <li class="list__items">
+                        <img src="emojies/okay.svg" alt="okay">
+                        <p>Є оплата частинами</p>
+                    </li>
+                </ul>
+                <div class="price-privileges">
+                    <p>Окрім занять з тічером, тобі доступні:</p>
+                    <ul class="price-list">
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand">
+                            <p>Support superheroes, які вирішать будь-яке питання</p>
+                        </li>
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand">
+                            <p>Спікінг-клаби і self-study-курси — безкоштовно у пакетах від 20 занять</p>
+                        </li>
+                    </ul>
+                    <p class="price-memo">І пам’ятай:<span> більше занять — нижча ціна. А ще — більше бонусів.</span></p>
+                </div> 
+                <div class="price-button">
+                    <a href="" class="button">Спробувати безкоштовно</a>
+                </div>
             </div>
             <div class="price-cards">
                 <div class="price-card">
@@ -218,31 +221,33 @@
     <footer>
         <div class="footer-elements">
             <div class="footer-content">
-                <div class="footer-content__list">
-                    <div class="list__items footer-list__items">
-                        <img src="emojies/location.svg" alt="location">
-                        <div class="email-adress">
-                            <span>Adress:</span>
+                <div class="footer-mobile">
+                    <div class="footer-content__list">
+                        <div class="list__items footer-list__items">
+                            <img src="emojies/location.svg" alt="location">
+                            <div class="email-adress">
+                                <span>Adress:</span>
+                            </div>
+                        </div>
+                        <div class="list__items footer-list__items">
+                            <img src="emojies/Call.svg" alt="call">
+                            <span>Tel : +9229341037</span>
+                        </div>
+                        <div class="list__items footer-list__items">
+                            <img src="emojies/email.svg" alt="email">
+                            <span>Email: info@onlearn.com</span>
                         </div>
                     </div>
-                    <div class="list__items footer-list__items">
-                        <img src="emojies/Call.svg" alt="call">
-                        <span>Tel : +9229341037</span>
-                    </div>
-                    <div class="list__items footer-list__items">
-                        <img src="emojies/email.svg" alt="email">
-                        <span>Email: info@onlearn.com</span>
-                    </div>
-                </div>
-                <div class="footer-additionally">
-                    <div class="footer-additionally__items">
-                        <p>Categories</p>
-                        <a href="#">Відгуки</a>
-                    </div>
-                    <div class="footer-additionally__items">
-                        <p>Links</p>
-                        <a href="#">Про нас</a>
-                        <a href="#">Блог</a>
+                    <div class="footer-additionally">
+                        <div class="footer-additionally__items">
+                            <p>Categories</p>
+                            <a href="#">Відгуки</a>
+                        </div>
+                        <div class="footer-additionally__items">
+                            <p>Links</p>
+                            <a href="#">Про нас</a>
+                            <a href="#">Блог</a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-content__search">
