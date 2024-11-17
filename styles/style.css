@@ -334,6 +334,11 @@ body {
         font-size: 14px !important;
     }
 }
+@media(max-height: 700px){
+    .close {
+        top: -32px !important;
+    }
+}
 a {
     text-decoration: none;
 }
@@ -922,7 +927,7 @@ footer {
     height: fit-content;
     position: absolute;
     top: -85px;
-    right: 41%;
+    right: 43%;
     font-size: 28px;
     font-weight: bold;
     color: #000;
