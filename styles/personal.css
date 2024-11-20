@@ -93,3 +93,89 @@ header {
     justify-content: space-between;
     padding: 12px 32px;
 }
+.main-cards {
+    display: flex;
+    gap: 10px;
+}
+.lessons {
+    justify-content: space-around;
+    padding: 35px 0;
+    width: 55%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.lessons img {
+    height: 200px;
+    width: 200px;
+}
+.lessons__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.lessons-title {
+    font-weight: 600;
+    size: 27px;
+}
+.progress {
+    margin-top: 35px;
+}
+.progress-bar {
+    width: 100%; 
+    height: 1px;
+    background-color: #385BD2;
+
+}
+.chat {
+    justify-content: space-between;
+    padding: 20px 25px;
+    width: 37%;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.chat-tacher__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.chat-teacher__items {
+    flex-direction: column;
+}
+.chat-teacher__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+.chat-content {
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column ;
+}
+.text-chat {
+    text-align: center;
+}
+.lessons-chat__input {
+    background-color: #EFEFEF;
+    padding: 15px 23px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
