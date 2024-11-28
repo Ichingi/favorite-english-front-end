@@ -1,3 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@media(max-width:940px) {
+    .personal-menu__icon {
+        display: inline !important;
+    }
+    .personal-burger {
+        display: none;
+    }
+    .personal-nav__center {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .personal-nav__item__active {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+}
+@media(max-width:1025px) {
+    .main-header {
+        display: flex !important;      
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .take-gift {
+        width: 80% !important;
+    }
+    .lessons-balance {
+        width: 70% !important;
+    }
+}
+@media(max-width:920px) {
+    .main-cards {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+    .lessons {
+        width: 70% !important;
+    }
+    .chat {
+        width: 61% !important;
+        height: 250px;
+    }
+}
+@media(max-width:740px) {
+    .lessons-image img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .lessons-title {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    }
+    @media(max-width:610px) {
+        .lessons {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+        .lessons__info {
+            display: flex !important;
+            flex-direction: column !important;
+            text-align: center;
+            gap: 18px !important;
+        }
+        
+    }
+    @media(max-width:540px) {
+        .lessons-balance {
+            width: 65% !important;
+        }
+    }
+    @media(max-width:393px) {
+        .lessons-balance {
+            display: flex !important;
+            flex-direction: column;
+            gap: 15px !important;
+            padding: 13px 20px !important;
+        }
+    }
+    @media(max-width:320px) {
+        .lessons-image img{
+            width: 100px !important;
+            height: 100px !important;
+        }
+        .lessons-title {
+            font-size: 15px !important;
+            font-weight: 200 !important;
+        }
+        .lessons-subtitle {
+            font-size: 15px !important;
+            font-weight: 200 !important;
+        }
+        .button {
+            padding: 9px 13px !important;
+            font-size: 14px !important;
+            font-weight: 250 !important;
+        }
+    }
+
+}
 header {
     background-color: white;
 }
@@ -7,6 +111,8 @@ header {
 }
 .personal-nav {
     border-bottom: solid 2px #e8e8e8;
+    display: flex;
+    justify-content: space-around;
 }
 .personal-nav__items {
     height: 80px;
@@ -85,22 +191,22 @@ header {
     -o-border-radius: 21px;
 }
 .take-gift {
-    width: 55%;
+    width: 58%;
     justify-content: center;
 }
 .lessons-balance {
-    width: 37%;
+    width: 34%;
     justify-content: space-between;
     padding: 12px 32px;
 }
 .main-cards {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
 }
 .lessons {
     justify-content: space-around;
-    padding: 35px 0;
-    width: 55%;
+    padding: 20px 0;
+    width: 58%;
     background-color: white;
     display: flex;
     align-items: center;
@@ -128,6 +234,11 @@ header {
     font-weight: 600;
     size: 27px;
 }
+.teacher {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.78px;
+}
 .progress {
     margin-top: 35px;
 }
@@ -138,9 +249,8 @@ header {
 
 }
 .chat {
-    justify-content: space-between;
-    padding: 20px 25px;
-    width: 37%;
+    padding: 20px 32px;
+    width: 34%;
     background-color: white;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -178,4 +288,35 @@ header {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+.personal-menu__icon {
+    display: none;
+    position: absolute;
+    font-size: 24px;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+.personal-burger__menu {
+    display: block;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #d8d8d8c4; 
+    padding-top: 60px;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+.personal-burger__menu ul {
+    color: white;
+    display: block !important;
+    flex-direction: column;
+}
+.logo {
+    padding: 0 30px;
+    width: 150px;
+    height: 150px;
 }

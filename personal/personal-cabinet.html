@@ -9,26 +9,29 @@
 </head>
 <body class="personal-body">
     <header>
-        <div class="personal-nav">
-            <ul class="personal-nav__items">
-                <li class="personal-nav__item">
-                    <img src="../images/Logo.svg" alt="Logo">
-                </li>
-                <li class="personal-nav__items personal-nav__center">
-                    <a class="personal-nav__item__active" href="">Заняття з тічером</a>
-                    <a href="">Практика</a>
-                </li>
-                <li class="personal-nav__item">
-                    <div class="profile">
-                        <div class="personal-menu">
-                            <img src="../emojies/arrow.svg" alt="arrow">
-                            <span>User</span>
-                        </div>
-                        <img src="../emojies/user.svg" alt="user">
+            <div class="personal-nav">
+            <div class="personal-menu__icon" onclick="toggleMenu()">☰</div>
+                <div class="personal-burger">
+            <div class="personal-menu__icon" onclick="toggleMenu()">☰</div>
+                    <ul class="personal-nav__items">
+                        <li class="personal-nav__item">
+                            <img class="logo" src="../images/Logo.svg" alt="Logo">
+                        </li>
+                        <li class="personal-nav__item personal-nav__center">
+                            <a class="personal-nav__item__active" href="">Заняття з тічером</a>
+                            <a href="">Практика</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile">
+                    <div class="personal-menu">
+                        <img class="" src="../emojies/arrow.svg" alt="arrow">
+                        <span>User</span>
                     </div>
-                </li>
-            </ul>
-        </div>
+                    <img src="../emojies/user.svg" alt="user">
+                </div>
+            </div>
+        </div>    
         <div class="header-bottom">
             <p>Успіхів у вивченні англійської!</p>
             <img src="../emojies/british-flag.svg" alt="British flag">
@@ -49,7 +52,7 @@
             </section>
             <section class="main-cards">
                 <div class="lessons">
-                    <img src="../images/lessons-photo.png" alt="">
+                    <div class="lessons-image"><img src="../images/lessons-photo.png" alt=""></div>
                     <div class="lessons__info">
                         <h5 class="lessons-title">Урок №5</h5>
                         <p class="lessons-subtitle">Опис</p>
@@ -65,7 +68,7 @@
                             <img src="../images/teacher-avatar.svg" alt="">
                             <div class="chat-teacher__items">
                                 <h4 class="chat-teacher__name">Богдан Жижула</h4>
-                                <p>Твій вчитель</p>
+                                <p class="teacher">Твій вчитель</p>
                             </div>
                         </div>
                         <h4 class="text-chat">Чат</h4>
@@ -115,5 +118,7 @@
             </div>    
         </div>
     </footer>
+
+    <script src="../js/personal.js"></script>
 </body>
 </html>
