@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@media(max-width:1530px){
+    .lessons__info {
+        width: 40%;
+    }
+}
+@media(max-width:1060px){
+    .container {
+        width: 90% !important;
+    }
+
+    /* Burger menu */
+    .personal-nav {
+        display: none !important;
+    }
+}
 @media(max-width:940px) {
+    .main-cards__card:first-child {
+        width: 175% !important;
+    }
+    .main-cards__card:last-child {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .main-cards__card:last-child p {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .main-cards__card:last-child .button {
+        width: 80%;
+    }
     .personal-menu__icon {
         display: inline !important;
     }
@@ -15,34 +44,24 @@
         background-color: rgba(0, 0, 0, 0) !important;
     }
 }
-@media(max-width:1025px) {
-    .main-header {
-        display: flex !important;      
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    .take-gift {
-        width: 80% !important;
-    }
-    .lessons-balance {
-        width: 70% !important;
+@media(max-width:920px) {
+    p {
+        font-size: 15px;
     }
 }
-@media(max-width:920px) {
-    .main-cards {
-        width: 100% !important;
-        display: flex;
+@media(max-width:780px) {
+    .main .main-cards:last-child {
         flex-direction: column;
-        align-items: center;
-        gap: 14px;
     }
-    .lessons {
-        width: 70% !important;
+
+    .main-cards__card:first-child, .main .main-cards:last-child .main-cards__card:last-child {
+        width: 100% !important;
+        padding: 12px 0 !important;
     }
-    .chat {
-        width: 61% !important;
-        height: 250px;
+
+    .chat-content {
+        width: 91% !important;
+        min-height: 190px;
     }
 }
 @media(max-width:740px) {
@@ -54,65 +73,99 @@
     font-size: 20px !important;
     font-weight: 400 !important;
     }
-    @media(max-width:610px) {
-        .lessons {
-            display: flex;
-            flex-direction: column;
-            gap: 13px;
-        }
-        .lessons__info {
-            display: flex !important;
-            flex-direction: column !important;
-            text-align: center;
-            gap: 18px !important;
-        }
-        
+}
+@media(max-width:540px) {
+    .main .main-cards:first-child {
+        flex-direction: column;
     }
-    @media(max-width:540px) {
-        .lessons-balance {
-            width: 65% !important;
-        }
+    .main .main-cards:first-child .main-cards__card:last-child {
+        flex-direction: row;
+        width: auto;
     }
-    @media(max-width:393px) {
-        .lessons-balance {
-            display: flex !important;
-            flex-direction: column;
-            gap: 15px !important;
-            padding: 13px 20px !important;
-        }
-    }
-    @media(max-width:320px) {
-        .lessons-image img{
-            width: 100px !important;
-            height: 100px !important;
-        }
-        .lessons-title {
-            font-size: 15px !important;
-            font-weight: 200 !important;
-        }
-        .lessons-subtitle {
-            font-size: 15px !important;
-            font-weight: 200 !important;
-        }
-        .button {
-            padding: 9px 13px !important;
-            font-size: 14px !important;
-            font-weight: 250 !important;
-        }
+    .main-cards__card:last-child .button {
+        width: auto;
     }
 
+    .lessons-image {
+        height: 153px !important;
+        width: 80% !important;
+    }
+
+    .main .main-cards:last-child .main-cards__card:first-child {
+        flex-direction: column;
+    }
+
+    .lessons__info {
+        width: 80% !important;
+        margin-top: 26px !important;
+    }
+}
+/* @media(max-width:393px) {
+    .lessons-balance {
+        display: flex !important;
+        flex-direction: column;
+        gap: 15px !important;
+        padding: 13px 20px !important;
+    }
+} */
+@media(max-width:320px) {
+    .lessons-image img{
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .lessons-title {
+        font-size: 15px !important;
+        font-weight: 200 !important;
+    }
+    .lessons-subtitle {
+        font-size: 15px !important;
+        font-weight: 200 !important;
+    }
+    .button {
+        padding: 9px 13px !important;
+        font-size: 14px !important;
+        font-weight: 250 !important;
+    }
+    .lessons-title {
+        font-weight: 500 !important;
+    }
+    .lessons-subtitle {
+        font-weight: 300 !important;
+    }
+
+    .button {
+        padding: 11px 14px !important;
+        border-radius: 12px !important;
+        -webkit-border-radius: 12px !important;
+        -moz-border-radius: 12px !important;
+        -ms-border-radius: 12px !important;
+        -o-border-radius: 12px !important;
+}
 }
 header {
     background-color: white;
+}
+.img-icon {
+    width: 37px;
+}
+.gap-small {
+    gap: 10px !important;
+}
+.justify-content-around {
+    justify-content: space-around !important;
 }
 .personal-body {
     background-color: #EEEFF0;
     height: 100%;
 }
 .personal-nav {
+    margin: 0;
     border-bottom: solid 2px #e8e8e8;
     display: flex;
     justify-content: space-around;
+}
+.personal-nav ul {
+    width: 100%;
 }
 .personal-nav__items {
     height: 80px;
@@ -172,13 +225,13 @@ header {
     align-items: start;
     padding: 12px 0;
 }
-.main-header{
-    margin-top: 48px;
-    width: 100%;
+.main-cards {
+    gap: 5px;
+    align-items: stretch;
     display: flex;
     justify-content: space-between;
 }
-.main-header__card {
+.main-cards__card {
     display: flex;
     gap: 3px;
     align-items: center;
@@ -190,42 +243,27 @@ header {
     -ms-border-radius: 21px;
     -o-border-radius: 21px;
 }
-.take-gift {
-    width: 58%;
+.main-cards__card:first-child {
+    width: 145%;
     justify-content: center;
 }
-.lessons-balance {
-    width: 34%;
+.main-cards__card:last-child {
+    width: 100%;
     justify-content: space-between;
     padding: 12px 32px;
 }
-.main-cards {
-    display: flex;
-    justify-content: space-between;
-}
-.lessons {
-    justify-content: space-around;
-    padding: 20px 0;
-    width: 58%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-.lessons img {
+.lessons-image {
     height: 200px;
     width: 200px;
+    border-radius: 20px;
 }
 .lessons__info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 17px;
 }
 .main {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 17px;
@@ -246,17 +284,6 @@ header {
     width: 100%; 
     height: 1px;
     background-color: #385BD2;
-
-}
-.chat {
-    padding: 20px 32px;
-    width: 34%;
-    background-color: white;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 .chat-tacher__info {
     display: flex;
@@ -272,10 +299,11 @@ header {
     line-height: 25px;
 }
 .chat-content {
+    width: 100%;
     height: 100%;
     justify-content: space-between;
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
 }
 .text-chat {
     text-align: center;

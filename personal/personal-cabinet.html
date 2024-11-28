@@ -9,29 +9,26 @@
 </head>
 <body class="personal-body">
     <header>
-            <div class="personal-nav">
-            <div class="personal-menu__icon" onclick="toggleMenu()">☰</div>
-                <div class="personal-burger">
-            <div class="personal-menu__icon" onclick="toggleMenu()">☰</div>
-                    <ul class="personal-nav__items">
-                        <li class="personal-nav__item">
-                            <img class="logo" src="../images/Logo.svg" alt="Logo">
-                        </li>
-                        <li class="personal-nav__item personal-nav__center">
-                            <a class="personal-nav__item__active" href="">Заняття з тічером</a>
-                            <a href="">Практика</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="profile">
-                    <div class="personal-menu">
-                        <img class="" src="../emojies/arrow.svg" alt="arrow">
-                        <span>User</span>
+        <nav class="personal-nav">
+            <ul class="personal-nav__items">
+                <li class="personal-nav__item">
+                    <img src="../images/Logo.svg" alt="Logo">
+                </li>
+                <li class="personal-nav__items personal-nav__center">
+                    <a class="personal-nav__item__active" href="">Заняття з тічером</a>
+                    <a href="">Практика</a>
+                </li>
+                <li class="personal-nav__item">
+                    <div class="profile">
+                        <div class="personal-menu">
+                            <img src="../emojies/arrow.svg" alt="arrow">
+                            <span>User</span>
+                        </div>
+                        <img src="../emojies/user.svg" alt="user">
                     </div>
-                    <img src="../emojies/user.svg" alt="user">
-                </div>
-            </div>
-        </div>    
+                </li>
+            </ul>
+        </nav>
         <div class="header-bottom">
             <p>Успіхів у вивченні англійської!</p>
             <img src="../emojies/british-flag.svg" alt="British flag">
@@ -40,29 +37,32 @@
 
     <div class="container">
         <section class="main">
-            <section class="main-header">
-                <div class="main-header__card take-gift">
+            <div class="main-cards">
+                <div class="main-cards__card gap-small">
                     <p>Отримати бонус</p>
-                    <img src="../emojies/coins.svg" alt="Coins">
+                    <img class="img-icon" src="../emojies/coins.svg" alt="Coins">
                 </div>
-                <div class="main-header__card lessons-balance">
-                    <p>Баланс: 5 уроків</p>
-                    <a href="" class="button btn-icon"> <img src="../emojies/wallet.svg" alt="Wallet"> Поповнити</a>
+                <div class="main-cards__card">
+                    <p>Баланс: <span>5 уроків</span></p>
+                    <a href="" class="button btn-icon">
+                        <img src="../emojies/wallet.svg" alt="Wallet">
+                        Поповнити
+                    </a>
                 </div>
-            </section>
-            <section class="main-cards">
-                <div class="lessons">
-                    <div class="lessons-image"><img src="../images/lessons-photo.png" alt=""></div>
+            </div>
+            <div class="main-cards">
+                <div class="main-cards__card justify-content-around">
+                    <img class="lessons-image" src="../images/lessons-photo.png" alt="">
                     <div class="lessons__info">
-                        <h5 class="lessons-title">Урок №5</h5>
-                        <p class="lessons-subtitle">Опис</p>
+                        <h5 class="lessons-title">26 Other news</h5>
+                        <p class="lessons-subtitle">Дивилися новини?<br>I did, I used to do, I was doing</p>
                         <a href="" class="button">Приєднатися</a>
                     </div>
                     <div class="progress">
                         <div class="progress-bar"></div>
                     </div>
                 </div>
-                <div class="chat">
+                <div class="main-cards__card">
                     <div class="chat-content">
                         <div class="chat-tacher__info">
                             <img src="../images/teacher-avatar.svg" alt="">
@@ -75,7 +75,7 @@
                         <input type="text" class="lessons-chat__input" placeholder="Повідомлення">
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </div>
     
