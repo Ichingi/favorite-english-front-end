@@ -223,7 +223,7 @@ header {
     padding-bottom: 17px;
     background-color: white;
     width: 100%;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 16px rgb(0 0 0 / 8%);
     border-radius: 0 0 12px 12px;
     transform: translateY(90%);
     -webkit-transform: translateY(90%);
