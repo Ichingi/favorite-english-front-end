@@ -225,11 +225,11 @@ header {
     width: 100%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 12px 12px;
-    transform: translateY(15vh);
-    -webkit-transform: translateY(15vh);
-    -moz-transform: translateY(15vh);
-    -ms-transform: translateY(15vh);
-    -o-transform: translateY(15vh);
+    transform: translateY(90%);
+    -webkit-transform: translateY(90%);
+    -moz-transform: translateY(90%);
+    -ms-transform: translateY(90%);
+    -o-transform: translateY(90%);
     -webkit-border-radius: 0 0 12px 12px;
     -moz-border-radius: 0 0 12px 12px;
     -ms-border-radius: 0 0 12px 12px;
