@@ -420,6 +420,12 @@ nav {
 .btn-transparrent:hover {
     background-color: transparent;
 }
+.btn-red {
+    background-color: #D2385F;
+}
+.btn-red:hover {
+    background-color: #ec4d75;
+}
 main {
     position: relative;
     margin-top: 112px;
