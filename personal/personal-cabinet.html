@@ -6,28 +6,58 @@
     <title>Особистий кабінет</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/personal.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="personal-body">
     <header>
         <nav class="personal-nav">
-            <ul class="personal-nav__items">
-                <li class="personal-nav__item">
-                    <img src="../images/Logo.svg" alt="Logo">
-                </li>
-                <li class="personal-nav__items personal-nav__center">
-                    <a class="personal-nav__item__active" href="">Заняття з тічером</a>
-                    <a href="">Практика</a>
-                </li>
-                <li class="personal-nav__item">
-                    <div class="profile">
-                        <div class="personal-menu">
-                            <img src="../emojies/arrow.svg" alt="arrow">
-                            <span>User</span>
+            <div class="container">
+                
+                <ul class="personal-nav__items">
+                    <li class="personal-nav__item">
+                        <div class="personal-nav__burger-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <img src="../emojies/user.svg" alt="user">
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                    <li class="personal-nav__item">
+                        <img src="../images/Logo.svg" alt="Logo">
+                    </li>
+                    <li class="personal-nav__items personal-nav__center personal-nav__burger-menu">
+                        <a class="personal-nav__item__active" href="">Заняття з тічером</a>
+                        <a href="">Практика</a>
+                    </li>
+                    <li class="personal-nav__item">
+                        <div class="profile">
+                            <div style="background-image: url('../emojies/user.svg');"></div>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">
+                                        <ion-icon name="settings-outline"></ion-icon>
+                                        Налаштування
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <ion-icon name="wallet-outline"></ion-icon>
+                                        Оплата
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <ion-icon name="hammer-outline"></ion-icon>
+                                        Адмін панель
+                                    </a>
+                                </li>
+                                <li><button class="button" href="#">Вийти</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="header-bottom">
             <p>Успіхів у вивченні англійської!</p>
