@@ -53,7 +53,7 @@
     flex-direction: column;
     gap: 10px;
 }
-.admin-panel-lists > ul > li {
+.admin-panel-lists > ul > li > a {
     align-items: center;
     display: flex;
     color: white;
@@ -72,10 +72,11 @@
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
 }
-.admin-panel-lists > ul > li:hover {
+
+.admin-panel-lists > ul > li > a:hover {
     background-color: #385AD2;
 }
-.admin-panel-lists > ul > li > ion-icon {
+.admin-panel-lists > ul > li > a > ion-icon {
     font-size: 20px;
 }
 .admin-panel-list {
