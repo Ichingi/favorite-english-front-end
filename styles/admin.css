@@ -1,38 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-/* ~~~~~~~~~~~~~~~ Reset Style ~~~~~~~~~~~~~~~ */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {display: block;}
-html {height: 100%;}
-body {line-height: 1;font-family: Raleway;}
-ol, ul {list-style: none;}
-blockquote, q {quotes: none;}
-blockquote:before, blockquote:after,
-q:before, q:after {content: ''; content: none;}
-table {border-collapse: collapse; border-spacing: 0;}
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media(max-width:320px) {
+    .admin-panel__arrow {
+        right: 10px !important;
+    }
+    .admin-panel.active .admin-panel__arrow {
+        right: 0px !important;
+    }
+    .admin-panel .admin-panel__arrow {
+        right: -20px !important;
+    }
+    .admin-panel-list {
+        height: 66% !important;
+    }
+}
 .admin-panel {
     display: block;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -295px;
     min-width: 170px;
     height: 100%;
-    background-color: #050503; 
+    background-color: #050503;
     padding: 60px 31px;
     z-index: 999;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+.admin-panel.active {
+    left: 0;
 }
 .admin-panel__content {
     height: 100%;
@@ -83,7 +80,7 @@ table {border-collapse: collapse; border-spacing: 0;}
 }
 .admin-panel-list {
     margin-top: 51px;
-    height: 75%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,4 +89,45 @@ table {border-collapse: collapse; border-spacing: 0;}
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+.admin-panel__arrow {
+    color: white;
+    background-color: #050503;
+    padding: 10px 10px;
+    border-radius: 50%;
+    align-items: end;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.admin-panel__arrow:hover {
+    transform: scale(96%);
+    -webkit-transform: scale(96%);
+    -moz-transform: scale(96%);
+    -ms-transform: scale(96%);
+    -o-transform: scale(96%);
+}
+.admin-panel.active .admin-panel__arrow {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
 }
