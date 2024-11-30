@@ -35,7 +35,7 @@
         margin-top: 5px;
         width: 100%;
     }
-    .main-cards__card:last-child .button {
+    .main-cards:first-child .main-cards__card:last-child .button {
         width: 80%;
     }
     .personal-menu__icon {
@@ -60,7 +60,7 @@
 
     .main-cards__card:first-child, .main .main-cards:last-child .main-cards__card:last-child {
         width: 100% !important;
-        padding: 12px 0 !important;
+        padding: 15px 0 !important;
     }
 
     .chat-content {
@@ -100,7 +100,7 @@
         flex-direction: row;
         width: auto;
     }
-    .main-cards__card:last-child .button {
+    .main-cards:first-child .main-cards__card:last-child .button {
         width: auto;
     }
 
@@ -122,15 +122,13 @@
         width: 80% !important;
         margin-top: 26px !important;
     }
-}
-/* @media(max-width:393px) {
-    .lessons-balance {
-        display: flex !important;
-        flex-direction: column;
-        gap: 15px !important;
-        padding: 13px 20px !important;
+    
+    .chat__input-items .button {
+        padding: 17px 15px !important;
+        border-radius: 16px !important;
+        font-size: 20px !important;
     }
-} */
+}
 @media(max-width:320px) {
     .personal-nav__item img {
         width: 140px;
@@ -208,13 +206,6 @@ header {
     width: 30px;
     background-color: #3f3f3f;
 }
-/* .personal-nav__center {
-    transition: 0.1s;
-    -webkit-transition: 0.1s;
-    -moz-transition: 0.1s;
-    -ms-transition: 0.1s;
-    -o-transition: 0.1s;
-} */
 .personal-nav__center.active {
     left: 0;
     opacity: 1;
@@ -242,6 +233,7 @@ header {
     display: none;
 }
 .personal-nav {
+    position: sticky;
     margin: 0;
     border-bottom: solid 2px #e8e8e8;
     display: flex;
@@ -487,14 +479,35 @@ header {
 .text-chat {
     text-align: center;
 }
-.lessons-chat__input {
+.chat__input {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    resize: vertical;
+    max-width: 100%;
+    border: none;
+    height: fit-content;
     background-color: #EFEFEF;
-    padding: 15px 23px;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    padding: 15px 85px 15px 23px;
+    outline: none;
+    border-radius: 21px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
+}
+.chat__input-items {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat__input-items .button {
+    position: absolute;
+    right: 21px;
+    bottom: 12px;
 }
 .personal-menu__icon {
     display: none;
