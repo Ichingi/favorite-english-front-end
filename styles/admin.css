@@ -131,3 +131,41 @@
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
 }
+.long-cards {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+.long-card {
+    align-items: center;
+    display: flex;
+    gap: 80px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 45px;
+    background-color: #FFFFFF;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -ms-border-radius: 26px;
+    -o-border-radius: 26px;
+    box-shadow: 0 4px 91.5px rgba(0, 0, 0, 0.13);
+}
+.admin-main {
+    margin-top: 50px;
+    transition: margin-left 0.3s ease;
+}
+.admin-main__content {
+    width: 90%;
+    margin: 0 auto;
+}
+.long-card span {
+    padding: 9px;
+    background-color: #385AD2;
+    color: white;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
