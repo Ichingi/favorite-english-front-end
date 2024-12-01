@@ -29,6 +29,11 @@ body {
 :root {
     --var-primary: #385AD2;
     --var-primary-light: #4f71ee;
+    --var-primary-extra-light: #c8d1ee;
+}
+::selection {
+    background: var(--var-primary-extra-light);
+    color: black;
 }
 /* * {
     border: 1px solid red !important;
