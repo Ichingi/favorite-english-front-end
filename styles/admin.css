@@ -193,6 +193,7 @@
     -o-border-radius: 9px;
 }
 .card-list {
+    position: relative;
     margin: 0 auto;
     width: 90%;
     margin-top: 48px;
@@ -242,4 +243,56 @@
 }
 .admin-body::-webkit-scrollbar-thumb:hover {
     background-color: #24283a;
+}
+
+#chart_div {
+    position: absolute;
+    top: 45px;
+    left: -12px;
+    width: 100%;
+}
+
+#chart_div > div > div > div > svg > g:nth-child(4) > g:nth-child(2) > g:first-child {
+    display: none;
+}
+#chart_div > div > div > div > svg > g:last-child {
+    stroke: rgb(194, 77, 174);
+    background-color: rgb(194, 77, 174);
+    fill: rgb(194, 77, 174);
+}
+#chart_div > div > div > div > svg > g:nth-child(4) > g:nth-child(2) > g:last-child > path {
+    stroke: #385AD2 !important;
+}
+
+#chart_div > div > div > div > svg > g:nth-child(4) > g:nth-child(2) > g:nth-child(2) > rect:first-child {
+    display: none;
+}
+
+#chart_div > div > div > div > svg > g:nth-child(4) > g:nth-child(3) > g > circle {
+    stroke: #385AD2;
+}
+#chart_div > div > div > div > svg > g:nth-child(4) > g:nth-child(3) > g > circle:last-child {
+    fill: #385AD2;
+}
+
+#chart_div > div > div > div > svg > g:nth-child(4) > g:last-child > g > text {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    fill: #9E9E9E;
+}
+
+#chart_div > div > div > div > svg > g:nth-child(5) > g > text,
+#chart_div > div > div > div > svg > g:nth-child(3) > g > g:first-child > text {
+    display: none;
+}
+#chart_div > div > div > div > svg > g:nth-child(3) > g > g > text {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+#chart_div > div > div > div > svg > g:nth-child(3) > g > path {
+    stroke: #385AD2 !important;
 }
