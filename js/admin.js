@@ -1,11 +1,33 @@
+// const arrow = document.querySelector('.admin-panel__arrow');
+// const adminPanel = document.querySelector('.admin-panel');
+// const adminMain = document.querySelector('.admin-main');
+
+// arrow.addEventListener('click', () => {
+//     adminPanel.classList.toggle('active');
+//     adminMain.classList.toggle('active');
+// });
+
+
 const arrow = document.querySelector('.admin-panel__arrow');
 const adminPanel = document.querySelector('.admin-panel');
 const adminMain = document.querySelector('.admin-main');
 
-adminMain.style.marginLeft = '310px';
+function checkScreenWidth() {
+    if (window.innerWidth <= 973) {
+        adminPanel.classList.remove('active');
+        adminMain.classList.remove('active');
+    }
+    else {
+        adminPanel.classList.add('active');
+        adminMain.classList.add('active');
+    }
+}
+
+checkScreenWidth();
 
 arrow.addEventListener('click', () => {
-    const isActive = adminPanel.classList.toggle('active');
-
-    adminMain.style.marginLeft = isActive ? '310px' : '0';
+    adminPanel.classList.toggle('active');
+    adminMain.classList.toggle('active');
 });
+
+window.addEventListener('resize', checkScreenWidth);
