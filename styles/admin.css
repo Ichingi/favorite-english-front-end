@@ -1,3 +1,10 @@
+@media(max-width:973px) {
+    .long-cards {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column;
+    }
+}
 @media(max-width:320px) {
     .admin-panel__arrow {
         right: 10px !important;
@@ -138,12 +145,8 @@
     justify-content: space-around;
 }
 .long-card {
-    align-items: center;
-    display: flex;
     gap: 80px;
     width: 100%;
-    justify-content: space-between;
-    padding: 20px 45px;
     background-color: #FFFFFF;
     border-radius: 26px;
     -webkit-border-radius: 26px;
@@ -151,6 +154,12 @@
     -ms-border-radius: 26px;
     -o-border-radius: 26px;
     box-shadow: 0 4px 91.5px rgba(0, 0, 0, 0.13);
+}
+.long-card__content {
+    display: flex;
+    padding: 20px 45px;
+    justify-content: space-between;
+    align-items: center;
 }
 .admin-main {
     margin-top: 50px;
