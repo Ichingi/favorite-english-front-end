@@ -154,7 +154,7 @@
         font-size: 15px !important;
         font-weight: 200 !important;
     }
-    .button {
+    .button:not(.btn-mini) {
         padding: 9px 13px !important;
         font-size: 14px !important;
         font-weight: 250 !important;
@@ -166,7 +166,7 @@
         font-weight: 300 !important;
     }
 
-    .button {
+    .button:not(.btn-mini) {
         padding: 11px 14px !important;
         border-radius: 12px !important;
         -webkit-border-radius: 12px !important;
@@ -195,7 +195,6 @@ header {
 }
 .personal-body {
     background-color: #EEEFF0;
-    height: 100%;
 }
 .personal-nav__burger-btn {
     display: flex;
