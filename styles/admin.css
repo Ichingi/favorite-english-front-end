@@ -170,7 +170,7 @@
     -ms-border-radius: 9px;
     -o-border-radius: 9px;
 }
-.users-statistics {
+.card-list {
     margin: 0 auto;
     width: 90%;
     margin-top: 48px;
@@ -178,11 +178,11 @@
     flex-direction: column;
     gap: 10px;
 }
-.users-statistics__title {
+.card-list__title {
     color: rgba(0, 0, 0, 0.39);
     margin-left: 9px;
 }
-.users-statistics__content {
+.card-list__content {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -195,7 +195,7 @@
     -ms-border-radius: 14px;
     -o-border-radius: 14px;
 }
-.users-statistics__info {
+.card-list__info {
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
