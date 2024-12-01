@@ -184,9 +184,11 @@
 .justify-content-around {
     justify-content: space-around !important;
 }
-
 header {
     background-color: white;
+}
+.main-cards:last-child .main-cards__card:first-child {
+    padding: 35px 0 !important;
 }
 .personal-body .container {
     width: 61%;
