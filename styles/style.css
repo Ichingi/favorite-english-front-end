@@ -434,6 +434,14 @@ nav {
     -ms-transform: scale(98%);
     -o-transform: scale(98%);
 }
+.button.active {
+    background-color: var(--var-primary-light);
+    transform: scale(98%);
+    -webkit-transform: scale(98%);
+    -moz-transform: scale(98%);
+    -ms-transform: scale(98%);
+    -o-transform: scale(98%);
+}
 .btn-transparrent {
     color: var(--var-primary);
     background-color: transparent;
