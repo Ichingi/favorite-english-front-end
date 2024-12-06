@@ -106,40 +106,6 @@
     </section>
 
     <script>
-        // Початкові налаштування для графіка
-        var options = {
-            chart: {
-                type: 'area',
-                height: 350,
-                toolbar: false
-            },
-            stroke: {
-                curve: 'smooth',
-            },
-            dataLabels: {
-                enabled: false
-            },
-            series: [{
-                name: 'Активність',
-                data: [45, 52, 38, 45, 19, 23, 2]  // Пустий масив для оновлення
-            }], 
-            fill: {
-                type: "gradient",
-                gradient: {
-                shadeIntensity: 1,
-                opacityFrom: 0.7,
-                opacityTo: 0.9,
-                stops: [0, 90, 100]
-                }
-            },
-            xaxis: {
-                type: 'datetime',
-            }
-        };
-    
-        var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
-        chart1.render();
-
         // Дані для дня (додано більше точок)
         var dayData = [
             { x: new Date('2024-12-01 00:00').getTime(), y: 50 },
@@ -177,6 +143,40 @@
             { x: new Date('2023-09-01').getTime(), y: 16500 },
             { x: new Date('2023-12-31').getTime(), y: 17000 }
         ];
+
+        // Початкові налаштування для графіка
+        var options = {
+            chart: {
+                type: 'area',
+                height: 350,
+                toolbar: false
+            },
+            stroke: {
+                curve: 'smooth',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            series: [{
+                name: 'Активність',
+                data: dayData  // Пустий масив для оновлення
+            }], 
+            fill: {
+                type: "gradient",
+                gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.7,
+                opacityTo: 0.9,
+                stops: [0, 90, 100]
+                }
+            },
+            xaxis: {
+                type: 'datetime',
+            }
+        };
+    
+        var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
+        chart1.render();
         
         // Функція для оновлення графіка
         function statUpdate(period, el) {
