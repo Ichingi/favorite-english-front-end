@@ -93,7 +93,7 @@
             <div class="buttons chart__buttons">
                 <div></div>
                 <div class="buttons__content">
-                    <button class="button btn-mini" onclick="statUpdate(1, this)">За день</button>
+                    <button class="button btn-mini active" onclick="statUpdate(1, this)">За день</button>
                     <button class="button btn-mini" onclick="statUpdate(2, this)">За тиждень</button>
                     <button class="button btn-mini" onclick="statUpdate(3, this)">За місяць</button>
                     <button class="button btn-mini" onclick="statUpdate(4, this)">За рік</button>
@@ -144,7 +144,6 @@
             { x: new Date('2023-12-31').getTime(), y: 17000 }
         ];
 
-        // Початкові налаштування для графіка
         var options = {
             chart: {
                 type: 'area',
@@ -159,7 +158,7 @@
             },
             series: [{
                 name: 'Активність',
-                data: dayData  // Пустий масив для оновлення
+                data: dayData
             }], 
             fill: {
                 type: "gradient",
@@ -178,7 +177,6 @@
         var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
         chart1.render();
         
-        // Функція для оновлення графіка
         function statUpdate(period, el) {
             let data;
             switch (period) {
@@ -201,8 +199,7 @@
                 data: data
             }]);
             
-            // Оновити активний стиль кнопки
-            document.querySelectorAll('.chart__buttons .btn-mini').forEach(button => {
+            document.querySelectorAll('.chart__buttons .buttons__content .btn-mini').forEach(button => {
                 button.classList.remove('active');
             });
             el.classList.add('active');
