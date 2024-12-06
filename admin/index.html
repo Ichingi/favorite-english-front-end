@@ -10,7 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="admin-body">
     <div class="admin-panel active">
@@ -88,9 +88,126 @@
 
         <div class="card-list">
             <p class="card-list__title">Графік</p>
-            <div id="chart_div"></div> 
+            
+            <!-- Кнопки для перемикання періодів -->
+            <div class="buttons chart__buttons">
+                <div></div>
+                <div class="buttons__content">
+                    <button class="button btn-mini" onclick="statUpdate(1, this)">За день</button>
+                    <button class="button btn-mini" onclick="statUpdate(2, this)">За тиждень</button>
+                    <button class="button btn-mini" onclick="statUpdate(3, this)">За місяць</button>
+                    <button class="button btn-mini" onclick="statUpdate(4, this)">За рік</button>
+                </div>
+            </div>
+            
+            <!-- Місце для графіка -->
+            <div id="chart1" class="apex-charts"></div>
         </div>
     </section>
+
+    <script>
+        // Початкові налаштування для графіка
+        var options = {
+            chart: {
+                type: 'area',
+                height: 350,
+                toolbar: false
+            },
+            stroke: {
+                curve: 'smooth',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            series: [{
+                name: 'Активність',
+                data: [45, 52, 38, 45, 19, 23, 2]  // Пустий масив для оновлення
+            }], 
+            fill: {
+                type: "gradient",
+                gradient: {
+                shadeIntensity: 1,
+                opacityFrom: 0.7,
+                opacityTo: 0.9,
+                stops: [0, 90, 100]
+                }
+            },
+            xaxis: {
+                type: 'datetime',
+            }
+        };
+    
+        var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
+        chart1.render();
+
+        // Дані для дня (додано більше точок)
+        var dayData = [
+            { x: new Date('2024-12-01 00:00').getTime(), y: 50 },
+            { x: new Date('2024-12-01 06:00').getTime(), y: 55 },
+            { x: new Date('2024-12-01 12:00').getTime(), y: 60 },
+            { x: new Date('2024-12-01 18:00').getTime(), y: 65 },
+            { x: new Date('2024-12-02 00:00').getTime(), y: 60 }
+        ];
+
+        // Дані для тижня
+        var weekData = [
+            { x: new Date('2024-12-01').getTime(), y: 200 },
+            { x: new Date('2024-12-02').getTime(), y: 220 },
+            { x: new Date('2024-12-03').getTime(), y: 210 },
+            { x: new Date('2024-12-04').getTime(), y: 250 },
+            { x: new Date('2024-12-05').getTime(), y: 230 },
+            { x: new Date('2024-12-06').getTime(), y: 240 },
+            { x: new Date('2024-12-07').getTime(), y: 250 }
+        ];
+
+        // Дані для місяця
+        var monthData = [
+            { x: new Date('2024-11-01').getTime(), y: 1000 },
+            { x: new Date('2024-11-07').getTime(), y: 1050 },
+            { x: new Date('2024-11-14').getTime(), y: 1100 },
+            { x: new Date('2024-11-21').getTime(), y: 1150 },
+            { x: new Date('2024-11-30').getTime(), y: 1200 }
+        ];
+
+        // Дані для року
+        var yearData = [
+            { x: new Date('2023-01-01').getTime(), y: 15000 },
+            { x: new Date('2023-03-01').getTime(), y: 15500 },
+            { x: new Date('2023-06-01').getTime(), y: 16000 },
+            { x: new Date('2023-09-01').getTime(), y: 16500 },
+            { x: new Date('2023-12-31').getTime(), y: 17000 }
+        ];
+        
+        // Функція для оновлення графіка
+        function statUpdate(period, el) {
+            let data;
+            switch (period) {
+                case 1:
+                    data = dayData;
+                    break;
+                case 2:
+                    data = weekData;
+                    break;
+                case 3:
+                    data = monthData;
+                    break;
+                case 4:
+                    data = yearData;
+                    break;
+            }
+            
+            chart1.updateSeries([{
+                name: 'Активність',
+                data: data
+            }]);
+            
+            // Оновити активний стиль кнопки
+            document.querySelectorAll('.chart__buttons .btn-mini').forEach(button => {
+                button.classList.remove('active');
+            });
+            el.classList.add('active');
+        }
+    </script>
     <script src="../js/admin.js"></script>
 </body>
 </html>
