@@ -3,6 +3,7 @@ const passwordEditIcon = document.querySelector('.password-edit');
 const togglePasswordIcon = document.getElementById('togglePassword');
 const passwordField = document.getElementById('password');
 const userDataContent = document.querySelector('.user-data__content');
+const interestsItems = document.querySelectorAll('.interests-card');
 
 // Обработка клика по иконке редактирования пароля
 passwordEditIcon.addEventListener('click', function () {
@@ -65,4 +66,17 @@ document.addEventListener('click', (event) => {
         const newType = currentType === 'password' ? 'text' : 'password';
         confirmPasswordInput.setAttribute('type', newType);
     }
+});
+
+// Логика изменения класса при клике на interests-card
+interestsItems.forEach((item) => {
+    item.addEventListener('click', function () {
+        // Если у элемента уже есть класс interests-item__active, убираем его
+        if (item.classList.contains('interests-card__active')) {
+            item.classList.remove('interests-card__active');
+        } else {
+            // Иначе добавляем класс
+            item.classList.add('interests-card__active');
+        }
+    });
 });
