@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/personal.css">
+    <link rel="stylesheet" href="../styles/settings.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="settings-body">
+    <div class="content">
+        <header>
+            <nav class="personal-nav">
+                <div class="container">
+                    <ul class="personal-nav__items">
+                        <li class="personal-nav__item">
+                            <div class="personal-nav__burger-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                        <li class="personal-nav__item">
+                            <img src="../images/Logo.svg" alt="Logo">
+                        </li>
+                        <li class="personal-nav__items personal-nav__center personal-nav__burger-menu">
+                            <a class="personal-nav__item__active" href="">Заняття з тічером</a>
+                            <a href="">Практика</a>
+                        </li>
+                        <li class="personal-nav__item">
+                            <div class="profile">
+                                <div style="background-image: url('../emojies/user.svg');"></div>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">
+                                            <ion-icon name="settings-outline"></ion-icon>
+                                            Налаштування
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <ion-icon name="wallet-outline"></ion-icon>
+                                            Оплата
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <ion-icon name="hammer-outline"></ion-icon>
+                                            Адмін панель
+                                        </a>
+                                    </li>
+                                    <li><button class="button" href="#">Вийти</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-bottom">
+                <p>Успіхів у вивченні англійської!</p>
+                <img src="../emojies/british-flag.svg" alt="British flag">
+            </div>
+        </header>
+        <div class="container">
+            <section class="settings">
+                <div class="settings-wraper">
+                    <div class="settings-edit">
+                        <div class="settings-edit__content">
+                            <div class="user-info">
+                                <div class=""><img class="user-photo" src="../images/user-photo.svg" alt="user-photo">
+                                </div>
+                                <div class="level__progress">
+                                    <div class="level-progress__content">
+                                        <span class="progress-title">Рівень 1</span>
+                                        <div class="progress-bar">
+                                            <div class="progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-account__info">
+                                <input type="text" value="Людмила">
+                                <input type="text" value="Павук">
+                                <div class="user-account__date">
+                                    <span class="account-date account-date__day">6</span>
+                                    <span class="account-date account-date__month">Січень</span>
+                                    <span class="account-date account-date__years">2007</span>
+                                </div>
+                                <div class="time-zone">
+                                    <select class="" name="time-zone">
+                                        <option selected>GMT +2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-account">
+                        <div class="settings-account__content">
+                            <div class=""><span class="settings-account__title">Акаунт</span></div>
+                            <div class="user-data">
+                                <div class="user-data__content">
+                                    <div class="user-data__password">
+                                        <img src="../images/password.svg" class="password-icon" alt="Password">
+                                        <input type="password" id="password" disabled value="fgsuhufg">
+                                        <ion-icon name="create-outline" class="password-edit"></ion-icon>
+                                        <ion-icon name="eye-outline" id="togglePassword"></ion-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="knowledge">
+                    <div class="knowledge-level">
+                        <div>
+                            <h1 class="knowledge-title">Рівень</h1>
+                        </div>
+                        <div>
+                            <p class="knowledge-subtitle">Зміна рівня впливає на складність завдань </p>
+                        </div>
+                        <div class="knoledge-level__bottom">
+                            <div class="knoledge-level__bottom__content">
+                                <div class="knowledge-bottom">
+                                    <select class="" name="knowledge-level">
+                                        <option selected>ADVANCED</option>
+                                    </select>
+                                    <div class="knowledge-test__proposition"><a href="" class="btn-transparrent">Пройти
+                                            тест</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interests">
+                            <h1>Інтереси</h1>
+                                <div class="interests-category">
+                                    <div class="interests-content">
+                                        <div class="interests-card">
+                                            <div class="interests-items">
+                                                <div class="interests-items__content">
+                                                    <img src="../images/bars-chart.svg" alt="Bars-chart">
+                                                    <span class="interests-subtitle">Бізнес</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="interests-card">
+                                            <div class="interests-items">
+                                                <div class="interests-items__content">
+                                                    <img src="../images/school.svg" alt="School">
+                                                    <span class="interests-subtitle">Навчання</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="interests-card">
+                                            <div class="interests-items">
+                                                <div class="interests-items__content">
+                                                    <img src="../images/scooter.svg" alt="Scooter">
+                                                    <span class="interests-subtitle">Робота</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="interests-card">
+                                            <div class="interests-items">
+                                                <div class="interests-items__content">
+                                                    <img src="../images/backpack.svg" alt="Bac">
+                                                    <span class="interests-subtitle">Подорожі</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="interests-card">
+                                            <div class="interests-items">
+                                                <div class="interests-items__content">
+                                                    <img src="../images/computer.svg" alt="Computer">
+                                                    <span class="interests-subtitle">Технології</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="interests-card">
+                                            <div class="interests-items">
+                                                <div class="interests-items__content">
+                                                    <img src="../images/game-console.svg" alt="Game-console">
+                                                    <span class="interests-subtitle">Розваги</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div class="content">
+    <script src="../js/personal.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+
+</html>

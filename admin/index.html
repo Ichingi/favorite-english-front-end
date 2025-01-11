@@ -3,208 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/admin.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>Адмін</title>
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>Favorite English</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="admin-body">
-    <div class="admin-panel active">
-        <ion-icon name="arrow-back-outline" class="admin-panel__arrow"></ion-icon>
-        <div class="admin-panel__content">
-            <div class="admin-logo">
-                <p>Favorite English</p>
-                <img src="../images/admin.svg" alt="Admin">
-            </div>
-            <div class="admin-panel-list">
-                <div class="admin-panel-lists">
-                    <ul class="admin-panel-list__header">
-                        <li>
-                            <a href="">
-                                <ion-icon name="home"></ion-icon>
-                                Головна
-                            </a>
+<body>
+    <div class="content">
+        <div class="container">
+            <header>
+                <nav>
+                    <div class="menu">
+                        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                        <ul class="nav__items">
+                            <li class="nav__item"><a href="">Головна</a></li>
+                            <li class="nav__item"><a href="">Блог</a></li>
+                            <li class="nav__item"><a href="">Про платформу</a></li>
+                            <li class="nav__item"><a href="">Контакти</a></li>
+                        </ul>
+                    </div>
+                    <div class="buttons">
+                        <a onclick="openModal('registration')" href="#" class="button btn-adaptive">Зареєструватися</a>
+                        <a onclick="openModal('login')" href="#" class="button btn-transparrent btn-adaptive">Увійти</a>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <span class="bg-circle"></span>
+                <span class="bg-circle bg-circle-blue"></span>
+                <div class="main__content">
+                    <h1 class="title">Вивчай англійську.</h1>
+                    <div class="doings">
+                        <div class="doings__item">
+                            <h4>Дивись фільми на англійській</h4>
+                            <img src="emojies/eye.svg" alt="Eye">
+                        </div>
+                        <div class="doings__item">
+                            <h4>Розмовляй англійською</h4>
+                            <img src="emojies/speak.svg" alt="Speak">
+                        </div>
+                        <div class="doings__item">
+                            <h4>Думай англійською</h4>
+                            <img src="emojies/brain.svg" alt="Brain">
+                        </div>
+                    </div>
+                    <span class="hr"></span>
+
+                    <div class="propositions">
+                        <div class="propositions__item">
+                            <p>
+                                Запишись на безкоштовний
+                                пробний урок та отримай бонуси
+                            </p>
+                            <a href="#" class="button">Записатися</a>
+                        </div>
+                        <div class="propositions__item">
+                            <p>
+                                Чому вчитися з нами
+                                ефективніше, ніж із репетитором 
+                            </p>
+                            <a href="#" class="button btn-transparrent">Дізнатися</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <section class="learn-english">
+                <div class="learn-english__content">
+                    <div class="learn-english__block">
+                        <span class="learn-english__prefix">
+                            Freedom
+                        </span>
+                        <span class="learn-english__name">
+                            вчити англійську як хочеш
+                        </span>
+                    </div>
+                    <p class="learn-english__subprefix">Ми — не просто онлайн-школа з репетиторами, а екосистема вивчення англійської:</p>    
+
+                    <ul class="box-list">
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand"> 
+                            <p>навчайся хоч з ноуту, хоч зі смартфону</p>
                         </li>
-                    </ul>
-                    <ul class="admin-panel-list__cener">
-                        <li>
-                            <a href="">
-                                <ion-icon name="people"></ion-icon>
-                                Користувачі
-                            </a>
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand"> 
+                            <p> вивчай мову з perfect teacher match</p>
                         </li>
-                        <li>
-                            <a href="">
-                                <ion-icon name="people"></ion-icon>
-                                Викладачі
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <ion-icon name="folder-open"></ion-icon>
-                                Курси
-                            </a>
+                        <li class="list__items">
+                            <img src="emojies/backhand.svg" alt="backhand"> 
+                            <p> додатково прокачуйся на спікінг-клабах, онлайн-курсах й інших активностях</p>
                         </li>
                     </ul>
                 </div>
-                <a href="" class="button btn-red">Вийти</a>
+            </section>    
+            <div class="test-proposition">
+                <div class="test-proposition__card">
+                    <div class="test-proposition__items">
+                        <p class="test-proposition__title">Круто, якщо ти знаєш свій рівень англійської. А якщо ні — <span class="test-proposition__title__blue">ми поруч ;)</span></p>
+                    </div>
+                    <div class="test-proposition__items">
+                        <p class="test-proposition_subtitle">Проведемо для тебе пробне заняття, де познайомимося, пройдемо тест на рівень англійської та визначимо твої цілі на навчання.</p>
+                    </div>
+                        <div class="test-proposition__button"><a href="" class="button">Пройти тест</a></div>
+                </div>        
+            </div>        
+        </div>
+            <section class="slider">
+                <div class="slider-track">
+                    <div class="slide">
+                        <div class="slide__content">
+                            <img src="emojies/work.svg" alt="work">
+                            <span class="slide__title"> Англійська для роботи</span>
+                        </div>
+                        <p class="slide__subtitle">Опануєш ділову лексику, зможеш читати англомовні джерела та легко порозумієшся з іноземними колегами</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__content">
+                            <img src="emojies/work.svg" alt="work">
+                            <span class="slide__title">Розмовний курс</span>
+                        </div>
+                        <p class="slide__subtitle">Мінімум теорії, максимум практики та a bunch of topics на будь-який випадок. Все це допоможе швидко подолати мовний бар’єр</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__content">
+                            <img src="emojies/work.svg" alt="work">
+                            <span class="slide__title">Англійська для початківців</span>
+                        </div>
+                        <p class="slide__subtitle">База-основа-фундамент, щоб опанувати базову граматику та підтримувати прості побутові розмови</p>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__content">
+                            <img src="emojies/work.svg" alt="work">
+                            <span class="slide__title">Англійська для початківців</span>
+                        </div>
+                        <p class="slide__subtitle">База-основа-фундамент, щоб опанувати базову граматику та підтримувати прості побутові розмови</p>
+                    </div>
+                </div>
+            </section>
+            <section class="price">
+                <div class="price-content">
+                    <p class="how-much">How much?</p>
+                    <ul class="price-lessons__info">
+                        <li class="list__items">
+                            <img src="emojies/clock.svg" alt="clock">
+                            <p>Урок – 50 хвилин</p>
+                        </li>
+                        <li class="list__items">
+                            <img src="emojies/okay.svg" alt="okay">
+                            <p>Є оплата частинами</p>
+                        </li>
+                    </ul>
+                    <div class="price-privileges">
+                        <p>Окрім занять з тічером, тобі доступні:</p>
+                        <ul class="box-list">
+                            <li class="list__items">
+                                <img src="emojies/backhand.svg" alt="backhand">
+                                <p>Support superheroes, які вирішать будь-яке питання</p>
+                            </li>
+                            <li class="list__items">
+                                <img src="emojies/backhand.svg" alt="backhand">
+                                <p>Спікінг-клаби і self-study-курси — безкоштовно у пакетах від 20 занять</p>
+                            </li>
+                        </ul>
+                        <p class="price-memo">І пам’ятай:<span> більше занять — нижча ціна. А ще — більше бонусів.</span></p>
+                    </div> 
+                    <div class="price-button">
+                        <a href="" class="button">Спробувати безкоштовно</a>
+                    </div>
+                </div>
+                <div class="price-cards">
+                    <div class="price-card">
+                        <div class="left-card">
+                            <div class="price-card-content">
+                                <p class="price-card__name">Мінімальний</p>
+                                <div class="price-card__lessons price-card__lessons__left">
+                                    <span>5 занять</span>
+                                    <img src="emojies/image 12.svg" alt="">
+                                </div>   
+                                <span class="hr price-card__hr"></span>
+                                <p class="card-feature">Освіжиш знання та зануришся у процес онлайн‑навчання.</p>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div class="price-left price-item">
+                                <p>Локал</p>
+                                <span>350 грн</span>
+                            </div>
+                            <div class="price-right price-item">
+                                <p>Носій</p>
+                                <span>1100 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-card right-card">
+                            <div class="price-card-content">
+                                <p class="price-card__name">Популярний</p>
+                                <div class="price-card__lessons price-card__lessons__right">
+                                    <span>10 занять</span>
+                                    <img src="emojies/okay.svg" alt="">
+                                </div>   
+                                <span class="hr price-card__hr"></span>
+                                <p class="card-feature">Заповниш прогалини у grammar skills та зробиш перші кроки до подолання мовного бар’єру.</p>
+                            </div>
+                        <div class="prices">
+                            <div class="price-left price-item">
+                                <p>Локал</p>
+                                <span>330 грн</span>
+                            </div>
+                            <div class="price-right price-item">
+                                <p>Носій</p>
+                                <span>1040 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
+    </div>
+    <footer>
+        <div class="footer-elements">
+            <div class="footer-content">
+                <div class="footer-lists">
+                    <div class="footer-content__list">
+                        <h5>Контакти</h5>
+                        <div class="list__items footer-list__items">
+                            <ion-icon name="call"></ion-icon>
+                            <p>Телефон: <a href="tel:+380957192906">+380957192906</a></p>
+                        </div>
+                        <div class="list__items footer-list__items">
+                            <ion-icon name="mail"></ion-icon>
+                            <p>Пошта: <a href="mailto:support@favorite-english.com">support@favorite-english.com</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-content__lists">
+                        <div class="footer-content__list footer-list__items">
+                            <h5>Категорії</h5>
+                            <a href="#">Відгуки</a>
+                        </div>
+                        <div class="footer-content__list footer-list__items">
+                            <h5>Посилання</h5>
+                            <a href="#">Про нас</a>
+                            <a href="#">Блог</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content__search">
+                    <p>Будь в курсі бонусів, скидок та інших новин. Підпишись на розсилку залишивши свою пошту нижче</p>
+                    <div>
+                        <input class="input-search" placeholder="Email" type="search">
+                        <ion-icon name="send" class="button btn-mini footer-content__button"></ion-icon>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </footer>
+
+    <!-- Модальне вікно авторизації -->
+    <div id="login" class="modal" data-modal="login">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login')"><ion-icon name="close-outline"></ion-icon></span>
+            <h2>Вхід</h2>
+            <div class="modal-inputs">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+            </div>
+            <div class="modal__bottom-section">
+                <a href="#">Відновити пароль?</a>
+                <a href="" class="button">Увійти</a>
+            </div>
+            <div class="modal-some-information">
+                <p>Або увійдіть через</p>
+                <div class="buttons">
+                    <button class="icon-btn"><img src="icons/apple.png" alt="Apple" width="14"></button>
+                    <button class="icon-btn google-btn"><img src="icons/google.png" alt="Google" width="14"></button>
+                </div>
             </div>
         </div>
     </div>
-    <section class="admin-main active">    
-        <div class="admin-main__content">
-            <div class="long-cards">
-                <div class="long-card">
-                    <div class="long-card__content">
-                        <p>Всього користувачів</p>
-                        <span>42</span>
-                    </div>
-                </div>
-                <div class="long-card">
-                    <div class="long-card__content">
-                        <p>Заявок на навчання</p>
-                        <span>42</span>
-                    </div>
-                </div>
+
+    <!-- Модальне вікно реєстрації -->
+    <div id="registration" class="modal" data-modal="registration">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registration')"><ion-icon name="close-outline"></ion-icon></span>
+            <h2>Реєстрація</h2>
+            <div class="modal-inputs">
+                <input type="text" placeholder="Ім'я" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Підтвердження паролю" required>
             </div>
-        </div>    
-        <div class="card-list">
-            <p class="card-list__title">Активність</p>
-            <div class="card-list__content">
-                <div class="card-list__info">
-                    <p>Користувачів  за місяць</p>
-                    <span>523</span>
-                </div>
-                <div class="card-list__info">
-                    <p>Користувачів  за день</p>
-                    <span>50</span>  
+            <div class="modal__bottom-section">
+                <a href="#">Є аккаунт? Увійти</a>
+                <a href="" class="button">Зареєструватись</a>
+            </div>
+            <div class="modal-some-information">
+                <p>Або через</p>
+                <div class="buttons">
+                    <button class="icon-btn"><img src="icons/apple.png" alt="Apple" width="14"></button>
+                    <button class="icon-btn google-btn"><img src="icons/google.png" alt="Google" width="14"></button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="card-list">
-            <p class="card-list__title">Графік</p>
-            
-            <!-- Кнопки для перемикання періодів -->
-            <div class="buttons chart__buttons">
-                <div></div>
-                <div class="buttons__content">
-                    <button class="button btn-mini active" onclick="statUpdate(1, this)">За день</button>
-                    <button class="button btn-mini" onclick="statUpdate(2, this)">За тиждень</button>
-                    <button class="button btn-mini" onclick="statUpdate(3, this)">За місяць</button>
-                    <button class="button btn-mini" onclick="statUpdate(4, this)">За рік</button>
-                </div>
-            </div>
-            
-            <!-- Місце для графіка -->
-            <div id="chart1" class="apex-charts"></div>
-        </div>
-    </section>
-
-    <script>
-        // Дані для дня (додано більше точок)
-        var dayData = [
-            { x: new Date('2024-12-01 00:00').getTime(), y: 50 },
-            { x: new Date('2024-12-01 06:00').getTime(), y: 55 },
-            { x: new Date('2024-12-01 12:00').getTime(), y: 60 },
-            { x: new Date('2024-12-01 18:00').getTime(), y: 65 },
-            { x: new Date('2024-12-02 00:00').getTime(), y: 60 }
-        ];
-
-        // Дані для тижня
-        var weekData = [
-            { x: new Date('2024-12-01').getTime(), y: 200 },
-            { x: new Date('2024-12-02').getTime(), y: 220 },
-            { x: new Date('2024-12-03').getTime(), y: 210 },
-            { x: new Date('2024-12-04').getTime(), y: 250 },
-            { x: new Date('2024-12-05').getTime(), y: 230 },
-            { x: new Date('2024-12-06').getTime(), y: 240 },
-            { x: new Date('2024-12-07').getTime(), y: 250 }
-        ];
-
-        // Дані для місяця
-        var monthData = [
-            { x: new Date('2024-11-01').getTime(), y: 1000 },
-            { x: new Date('2024-11-07').getTime(), y: 1050 },
-            { x: new Date('2024-11-14').getTime(), y: 1100 },
-            { x: new Date('2024-11-21').getTime(), y: 1150 },
-            { x: new Date('2024-11-30').getTime(), y: 1200 }
-        ];
-
-        // Дані для року
-        var yearData = [
-            { x: new Date('2023-01-01').getTime(), y: 15000 },
-            { x: new Date('2023-03-01').getTime(), y: 15500 },
-            { x: new Date('2023-06-01').getTime(), y: 16000 },
-            { x: new Date('2023-09-01').getTime(), y: 16500 },
-            { x: new Date('2023-12-31').getTime(), y: 17000 }
-        ];
-
-        var options = {
-            chart: {
-                type: 'area',
-                height: 350,
-                toolbar: false
-            },
-            stroke: {
-                curve: 'smooth',
-            },
-            dataLabels: {
-                enabled: false
-            },
-            series: [{
-                name: 'Активність',
-                data: dayData
-            }], 
-            fill: {
-                type: "gradient",
-                gradient: {
-                shadeIntensity: 1,
-                opacityFrom: 0.7,
-                opacityTo: 0.9,
-                stops: [0, 90, 100]
-                }
-            },
-            xaxis: {
-                type: 'datetime',
-            }
-        };
-    
-        var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
-        chart1.render();
-        
-        function statUpdate(period, el) {
-            let data;
-            switch (period) {
-                case 1:
-                    data = dayData;
-                    break;
-                case 2:
-                    data = weekData;
-                    break;
-                case 3:
-                    data = monthData;
-                    break;
-                case 4:
-                    data = yearData;
-                    break;
-            }
-            
-            chart1.updateSeries([{
-                name: 'Активність',
-                data: data
-            }]);
-            
-            document.querySelectorAll('.chart__buttons .buttons__content .btn-mini').forEach(button => {
-                button.classList.remove('active');
-            });
-            el.classList.add('active');
-        }
-    </script>
-    <script src="../js/admin.js"></script>
+    <script src="js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

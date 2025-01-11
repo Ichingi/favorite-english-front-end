@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    background-color: #EEEFF0;
+}
+.settings-body .container {
+    width: 61%;
+}
+.personal-nav__burger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    z-index: 3;
+}
+.settings-edit {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 38px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.settings {
+    display: flex;
+    gap: 40px;
+}
+.settings-wraper {
+    margin-top: 48px;
+}
+.settings-edit__content {
+    display: flex;
+    gap: 23px;
+}
+.user-account__info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+}
+.user-account__info input {
+    background-color: rgba(249, 249, 249, 1);
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    padding: 8px 18px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.user-account__date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.user-account__date span{
+    background-color: rgba(249, 249, 249, 1);
+}
+.account-date {
+    padding: 6px 35px;
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.progress-title {
+    color: #797979;
+}
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    width: 100%;
+    background-color: #3366cc;
+    border-radius: 10px;
+}
+.level__progress {
+    padding: 8px 19px;
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    background-color: rgba(249, 249, 249, 1);
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+}
+.level-progress__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.user-photo {
+    height: 125px;
+    width: 125px;
+}
+.time-zone {
+    margin-top: 19px;
+}
+.time-zone select{
+    width: 100%;
+    padding: 9px 18px;
+    border-radius: 7px;
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    background-color: rgba(249, 249, 249, 1);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.settings-account {
+    margin-top: 15px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 38px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.settings-account__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.user-data__password {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.user-data__password #togglePassword{
+    position: absolute;
+    right: 45px; /* Отступ от правого края */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+.user-data__password input {
+    width: 100%;
+    position: relative;
+    padding: 7px 40px;
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.settings-account__title {
+    font-weight: 500;
+    font-size: 20px;
+}
+.password-icon {
+    line-height: 26px;
+    text-align: center;
+    margin-right: -26px;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+.password-edit {
+    height: 30px;
+    width: 30px;
+    color: #3366cc;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.confirm-password {
+    margin-top: 20px;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+.confirm-password input {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    padding: 7px 40px;
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.knowledge {
+    margin-top: 48px;
+    padding: 34px 38px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 38px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.knowledge-title {
+    font-weight: 500;
+    font-size: 20px;
+}
+.knowledge-level {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.knoledge-level__bottom {
+    margin-top: 15px;
+}
+.knowledge-bottom select {
+    width: 175px;
+    padding: 9px 18px;
+    border-radius: 7px;
+    border: 1.5px solid rgba(223, 223, 223, 1);
+    background-color: rgba(249, 249, 249, 1);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.knowledge-bottom {
+    display: flex;
+    gap: 50px;
+}
+.knowledge-test__proposition {
+    align-self: center;
+}
+.interests {
+    margin-top: 35px;
+}
+.interests h1{
+    font-weight: 500;
+    font-size: 20px;
+}
+.interests-category {
+    width: 100%;
+    margin-top: 15px;
+}
+.interests-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+.interests-card {
+    padding: 10px 15px;
+    border: solid 1px rgba(255, 255, 255, 1);
+    border-radius: 12px;
+}
+.interests-items {
+    cursor: pointer;
+}
+.interests-card__active {
+    padding: 10px 15px;
+    background-color: rgba(56, 91, 210, 0.06);
+    border: solid 1px #385BD2;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.interests-item__active .interests-items__content span{
+    color: #385BD2;
+}
+.interests-items__content {
+    display: flex;
+    gap: 12px;
+}
+.interests-items__content span{
+    font-weight: 500;
+    font-size: 14px;
+}
+.interests-subtitle {
+    align-self: center;
+}
