@@ -11,9 +11,7 @@
     .knowledge {
         width: 75% !important;
     }
-    .account-date {
-        padding: 6px 22px !important;
-    }
+
 }
 @media(max-width:630px) {
     .settings-edit__content {
@@ -35,21 +33,23 @@
     .interests-card {
         padding: 7px 10px !important;
     }
+}
+@media(max-width:580px) {
     .knowledge {
-        width: 80% !important;
+        width: 100% !important;
+    }
+    .settings-wraper {
+        width: 100% !important;
     }
 }
 @media(max-width:461px) {
     .account-date {
-        padding: 6px 12px !important;
+        padding: 6px 22px !important;
     }
 }
 @media(max-width:432px) {
     .knowledge-bottom {
         gap: 10px !important;
-    }
-    .knowledge {
-        width: 85% !important;
     }
     .knowledge-bottom select {
         width: 134px !important;
