@@ -70,7 +70,6 @@ body {
     z-index: 3;
 }
 .settings-edit {
-    width: 90%;
     background-color: rgba(255, 255, 255, 1);
     padding: 38px;
     border-radius: 20px;
@@ -180,7 +179,6 @@ body {
 }
 .settings-account {
     margin-top: 15px;
-    width: 90%;
     background-color: rgba(255, 255, 255, 1);
     padding: 38px;
     border-radius: 20px;
