@@ -189,17 +189,19 @@ body {
 }
 .user-data__password #togglePassword{
     position: absolute;
-    right: 45px; /* Отступ от правого края */
+    right: 45px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
+    cursor: pointer;
 }
 .user-data__password #toggleConfirmPassword{
     position: absolute;
-    right: 45px; /* Отступ от правого края */
+    right: 45px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
+    cursor: pointer;
 }
 .user-data__password input {
     width: 100%;
@@ -239,7 +241,9 @@ body {
     opacity: 0;
     transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
-
+.confirm-password__edit {
+    color: rgba(255, 255, 255, 0);
+}
 .confirm-password input {
     width: 100%;
     padding: 7px 40px;

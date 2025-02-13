@@ -5,7 +5,6 @@ const passwordField = document.getElementById('password');
 const userDataContent = document.querySelector('.user-data__content');
 const interestsItems = document.querySelectorAll('.interests-card');
 
-// Обработка клика по иконке редактирования пароля
 passwordEditIcon.addEventListener('click', function () {
     let confirmPasswordField = document.querySelector('.confirm-password');
 
@@ -25,6 +24,8 @@ passwordEditIcon.addEventListener('click', function () {
                 <img src="../images/password.svg" class="password-icon" alt="Password">
                 <input type="password" id="confirmPassword" placeholder="Подтвердите пароль">
                 <ion-icon id="toggleConfirmPassword" name="eye-outline" class="toggle-password"></ion-icon>
+                <ion-icon name="create-outline" class="password-edit confirm-password__edit"></ion-icon>
+
             `;
             userDataContent.appendChild(confirmPasswordField);
             setTimeout(() => {
@@ -42,12 +43,10 @@ function togglePasswordVisibility(inputField, iconElement) {
     iconElement.setAttribute('name', newType === 'password' ? 'eye-outline' : 'eye-off-outline');
 }
 
-// Обработка клика по "глазу" для показа/скрытия пароля
 togglePasswordIcon.addEventListener('click', () => {
     togglePasswordVisibility(passwordField, togglePasswordIcon);
 });
 
-// Обработка клика по "глазу" в поле подтверждения пароля
 document.addEventListener('click', (event) => {
     const confirmPasswordInput = document.getElementById('confirmPassword');
     const confirmPasswordIcon = document.getElementById('toggleConfirmPassword');
@@ -56,7 +55,6 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Логика изменения класса при клике на interests-card
 interestsItems.forEach((item) => {
     item.addEventListener('click', function () {
         item.classList.toggle('interests-card__active');
