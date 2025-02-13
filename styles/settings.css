@@ -13,7 +13,7 @@
     }
 
 }
-@media(max-width:630px) {
+@media(max-width:730px) {
     .settings-edit__content {
         display: flex;
         flex-direction: column;
@@ -42,11 +42,6 @@
         width: 100% !important;
     }
 }
-@media(max-width:461px) {
-    .account-date {
-        padding: 6px 22px !important;
-    }
-}
 @media(max-width:432px) {
     .knowledge-bottom {
         gap: 10px !important;
@@ -58,6 +53,11 @@
 @media(max-width:388px) {
     .account-date {
         padding: 6px 15px !important;
+    }
+}
+@media(max-width:382px) {
+    .account-date {
+        padding: 6px 5px !important;
     }
 }
 body {
