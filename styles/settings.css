@@ -100,8 +100,8 @@ body {
     width: 100%;
 }
 .user-account__info input {
-    background-color: rgba(249, 249, 249, 1);
-    border: 1.5px solid rgba(223, 223, 223, 1);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ABABAB;
     padding: 8px 18px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -110,15 +110,16 @@ body {
     -o-border-radius: 7px;
 }
 .user-account__date {
+    margin-top: 7px;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.user-account__date span{
+.user-account__date select{
     background-color: rgba(249, 249, 249, 1);
 }
 .account-date {
-    padding: 6px 35px;
+    padding: 6px 15px;
     border: 1.5px solid rgba(223, 223, 223, 1);
     border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -161,20 +162,6 @@ body {
     height: 125px;
     width: 125px;
 }
-.time-zone {
-    margin-top: 19px;
-}
-.time-zone select{
-    width: 100%;
-    padding: 9px 18px;
-    border-radius: 7px;
-    border: 1.5px solid rgba(223, 223, 223, 1);
-    background-color: rgba(249, 249, 249, 1);
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-}
 .user-info {
     display: flex;
     flex-direction: column;
@@ -201,6 +188,13 @@ body {
     position: relative;
 }
 .user-data__password #togglePassword{
+    position: absolute;
+    right: 45px; /* Отступ от правого края */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+.user-data__password #toggleConfirmPassword{
     position: absolute;
     right: 45px; /* Отступ от правого края */
     top: 50%;
@@ -238,21 +232,19 @@ body {
     cursor: pointer;
 }
 .confirm-password {
-    margin-top: 20px;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-}
-.confirm-password input {
     display: flex;
     align-items: center;
-    width: 80%;
-    position: relative;
+    margin-top: 10px;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.confirm-password input {
+    width: 100%;
     padding: 7px 40px;
     border: 1.5px solid rgba(223, 223, 223, 1);
     border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
 }
 .knowledge {
     margin-top: 48px;
@@ -316,6 +308,7 @@ body {
     padding: 10px 15px;
     border: solid 1px rgba(255, 255, 255, 1);
     border-radius: 12px;
+    transition: 0.2s;
 }
 .interests-items {
     cursor: pointer;
@@ -329,6 +322,11 @@ body {
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
 }
 .interests-item__active .interests-items__content span{
     color: #385BD2;
