@@ -9,74 +9,56 @@ const interestsItems = document.querySelectorAll('.interests-card');
 passwordEditIcon.addEventListener('click', function () {
     let confirmPasswordField = document.querySelector('.confirm-password');
 
-    // Если поле уже активно (disabled отсутствует)
     if (!passwordField.hasAttribute('disabled')) {
-        // Возвращаем disabled и убираем поле подтверждения (если есть)
         passwordField.setAttribute('disabled', true);
-
         if (confirmPasswordField) {
-            confirmPasswordField.style.maxHeight = '0'; // Скрываем поле с анимацией
-            confirmPasswordField.style.opacity = '0'; // Плавное исчезновение
-            setTimeout(() => {
-                confirmPasswordField.remove(); // Удаляем элемент через таймер, чтобы завершилась анимация
-            }, 300); // Время должно совпадать с CSS-анимацией
+            confirmPasswordField.style.maxHeight = '0';
+            confirmPasswordField.style.opacity = '0';
+            setTimeout(() => confirmPasswordField.remove(), 300);
         }
     } else {
-        // Если поле неактивно (disabled есть)
-        passwordField.removeAttribute('disabled'); // Убираем disabled
-
-        // Создаем поле подтверждения пароля
+        passwordField.removeAttribute('disabled');
         if (!confirmPasswordField) {
             confirmPasswordField = document.createElement('div');
             confirmPasswordField.className = 'user-data__password confirm-password';
-
             confirmPasswordField.innerHTML = `
                 <img src="../images/password.svg" class="password-icon" alt="Password">
                 <input type="password" id="confirmPassword" placeholder="Подтвердите пароль">
+                <ion-icon id="toggleConfirmPassword" name="eye-outline" class="toggle-password"></ion-icon>
             `;
             userDataContent.appendChild(confirmPasswordField);
-
-            // Активация поля и анимация через небольшую задержку
             setTimeout(() => {
-                confirmPasswordField.style.maxHeight = '200px';
+                confirmPasswordField.style.maxHeight = '50px';
                 confirmPasswordField.style.opacity = '1';
             }, 10);
         }
     }
 });
 
+function togglePasswordVisibility(inputField, iconElement) {
+    const currentType = inputField.getAttribute('type');
+    const newType = currentType === 'password' ? 'text' : 'password';
+    inputField.setAttribute('type', newType);
+    iconElement.setAttribute('name', newType === 'password' ? 'eye-outline' : 'eye-off-outline');
+}
+
 // Обработка клика по "глазу" для показа/скрытия пароля
 togglePasswordIcon.addEventListener('click', () => {
-    const currentType = passwordField.getAttribute('type');
-    const newType = currentType === 'password' ? 'text' : 'password';
-    passwordField.setAttribute('type', newType);
-
-    // Меняем иконку в зависимости от состояния
-    togglePasswordIcon.setAttribute(
-        'name',
-        newType === 'password' ? 'eye-outline' : 'eye-off-outline'
-    );
+    togglePasswordVisibility(passwordField, togglePasswordIcon);
 });
 
-// Обработка клика по "глазу" для подтверждения пароля (если существует поле confirmPassword)
+// Обработка клика по "глазу" в поле подтверждения пароля
 document.addEventListener('click', (event) => {
     const confirmPasswordInput = document.getElementById('confirmPassword');
-    if (confirmPasswordInput && event.target === togglePasswordIcon) {
-        const currentType = confirmPasswordInput.getAttribute('type');
-        const newType = currentType === 'password' ? 'text' : 'password';
-        confirmPasswordInput.setAttribute('type', newType);
+    const confirmPasswordIcon = document.getElementById('toggleConfirmPassword');
+    if (confirmPasswordInput && event.target === confirmPasswordIcon) {
+        togglePasswordVisibility(confirmPasswordInput, confirmPasswordIcon);
     }
 });
 
 // Логика изменения класса при клике на interests-card
 interestsItems.forEach((item) => {
     item.addEventListener('click', function () {
-        // Если у элемента уже есть класс interests-item__active, убираем его
-        if (item.classList.contains('interests-card__active')) {
-            item.classList.remove('interests-card__active');
-        } else {
-            // Иначе добавляем класс
-            item.classList.add('interests-card__active');
-        }
+        item.classList.toggle('interests-card__active');
     });
 });

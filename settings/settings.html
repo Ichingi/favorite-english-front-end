@@ -73,7 +73,12 @@
                     <div class="settings-edit">
                         <div class="settings-edit__content">
                             <div class="user-info">
-                                <div class="user-photo"><img class="" src="../images/user-photo.svg" alt="user-photo">
+                                <div class="user-photo">
+                                    <label for="file-input">
+                                        <img class="" src="../images/user-photo.svg" alt="user-photo">
+                                        <input type="file" id="file-input" style="display: none;">
+                                    </label>
+                                    
                                 </div>
                                 <div class="level__progress">
                                     <div class="level-progress__content">
@@ -87,14 +92,56 @@
                             <div class="user-account__info">
                                 <input type="text" value="Людмила">
                                 <input type="text" value="Павук">
-                                <div class="user-account__date">
-                                    <span class="account-date account-date__day">6</span>
-                                    <span class="account-date account-date__month">Січень</span>
-                                    <span class="account-date account-date__years">2007</span>
-                                </div>
-                                <div class="time-zone">
-                                    <select class="" name="time-zone">
-                                        <option selected>GMT +2</option>
+                                <div class="user-account__date">                                    
+                                    <select class="account-date account-day">
+                                        <option selected>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>                          
+                                    </select>
+                                    <select class="account-date account-month">
+                                        <option selected>Січень</option>
+                                        <option>Лютий</option>
+                                        <option>Березень</option>
+                                        <option>Квітень</option>
+                                        <option>Травень</option>
+                                        <option>Червень</option>
+                                        <option>Липень</option>
+                                        <option>Серпень</option>
+                                        <option>Вересень</option>
+                                        <option>Жовтень</option>
+                                        <option>Листопад</option>
+                                        <option>Грудень</option>
+                                    </select>
+                                    <select class="account-date account-years">
+                                        <option selected>2007</option>
                                     </select>
                                 </div>
                             </div>
@@ -130,8 +177,7 @@
                                     <select class="" name="knowledge-level">
                                         <option selected>ADVANCED</option>
                                     </select>
-                                    <div class="knowledge-test__proposition"><a href="" class="btn-transparrent">Пройти
-                                            тест</a></div>
+                                    <div class="knowledge-test__proposition"><a href="favorite-english.com" class="btn-transparrent">Пройти тест</a></div>
                                 </div>
                             </div>
                         </div>
