@@ -22,10 +22,9 @@ passwordEditIcon.addEventListener('click', function () {
             confirmPasswordField.className = 'user-data__password confirm-password';
             confirmPasswordField.innerHTML = `
                 <img src="../images/password.svg" class="password-icon" alt="Password">
-                <input type="password" id="confirmPassword" placeholder="Подтвердите пароль">
+                <input type="password" id="confirmPassword" placeholder="Підтвердіть паролья">
                 <ion-icon id="toggleConfirmPassword" name="eye-outline" class="toggle-password"></ion-icon>
                 <ion-icon name="create-outline" class="password-edit confirm-password__edit"></ion-icon>
-
             `;
             userDataContent.appendChild(confirmPasswordField);
             setTimeout(() => {
