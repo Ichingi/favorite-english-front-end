@@ -42,6 +42,11 @@
         width: 100% !important;
     }
 }
+@media(max-width:465px) {
+    .account-date {
+        padding: 6px 5px !important;
+    }
+}
 @media(max-width:432px) {
     .knowledge-bottom {
         gap: 10px !important;
@@ -50,16 +55,7 @@
         width: 134px !important;
     }
 }
-@media(max-width:388px) {
-    .account-date {
-        padding: 6px 15px !important;
-    }
-}
-@media(max-width:382px) {
-    .account-date {
-        padding: 6px 5px !important;
-    }
-}
+
 body {
     background-color: #EEEFF0;
 }
@@ -103,11 +99,11 @@ body {
     background-color: #F9F9F9;
     border: 1px solid #ABABAB;
     padding: 10px 22px;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .user-account__date {
     margin-top: 7px;
@@ -120,13 +116,13 @@ body {
 }
 .account-date {
     outline: none;
-    padding: 6px 15px;
+    padding: 6px 20px;
     border: 1.5px solid rgba(223, 223, 223, 1);
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .progress-title {
     color: #797979;
@@ -209,11 +205,11 @@ body {
     position: relative;
     padding: 7px 40px;
     border: 1.5px solid rgba(223, 223, 223, 1);
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .settings-account__title {
     font-weight: 500;
@@ -253,7 +249,11 @@ body {
     width: 100%;
     padding: 7px 40px;
     border: 1.5px solid rgba(223, 223, 223, 1);
-    border-radius: 7px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .knowledge {
     margin-top: 48px;
@@ -285,7 +285,7 @@ body {
     border-radius: 7px;
     border: 1.5px solid rgba(223, 223, 223, 1);
     background-color: rgba(249, 249, 249, 1);
-    -webkit-border-radius: 7px;
+    -webkit-border-radius: 10px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
