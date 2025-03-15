@@ -14,8 +14,7 @@
     <div class="content">
         <header>
             <nav class="personal-nav">
-                <div class="container">
-                    
+                <div class="container">        
                     <ul class="personal-nav__items">
                         <li class="personal-nav__item">
                             <div class="personal-nav__burger-btn">
@@ -69,12 +68,11 @@
         <div class="container">
             <section class="main">
                 <div class="main-cards">
-                    <div class="main-cards__card gap-small">
+                    <div class="main-cards__card main-left__card gap-small">
                         <p>Отримати бонус</p>
-                        <img class="img-icon" src="../emojies/coins.svg" alt="Coins">
                     </div>
                     <div class="main-cards__card">
-                        <p>Баланс: <span>5 уроків</span></p>
+                        <p><span class="grey">Баланс:</span> <span class="blue">5 уроків</span></p>
                         <a href="" class="button btn-icon">
                             <img src="../emojies/wallet.svg" alt="Wallet">
                             Поповнити
@@ -88,67 +86,52 @@
                         <div class="lessons__info">
                             <h5 class="lessons-title">26 Other news</h5>
                             <p class="lessons-subtitle">Дивилися новини?<br>I did, I used to do, I was doing</p>
-                            <a href="" class="button">Приєднатися</a>
+                            <div class="lessons-buttons">
+                                <a href="" class="button button-lessons">Приєднатися</a>
+                                <a href="" class="button-lessons button-gray">Виконати Д/З</a>
+                            </div>
                         </div>
                     </div>
                     <div class="main-cards__card">
                         <div class="chat-content">
-                            <div class="chat-tacher__info">
+                            <div class="chat-teacher__info">
                                 <img src="../images/teacher-avatar.svg" alt="">
                                 <div class="chat-teacher__items">
                                     <h4 class="chat-teacher__name">Богдан Жижула</h4>
                                     <p class="teacher">Твій вчитель</p>
                                 </div>
                             </div>
-                            <h4 class="text-chat">Чат</h4>
+                            <h4 class="text-chat">Поки тут пусто</h4>
                             <div class="chat__input-items">
-                                <textarea name="" class="chat__input" placeholder="Повідомлення"></textarea>
+                                <input name="" class="chat__input" placeholder="Повідомлення"></input>
                                 <ion-icon name="send" class="button btn-mini"></ion-icon>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news-content">
+                        <img src="../images/news-image.png" alt="" class="news-image">
+                        <div class="news-text">
+                            <h1 class="news-title">Найчастіші фрази для бізнесу</h1>
+                            <p class="news-subtitle">Перегляньте цю новину та дізнайтесь більше про англійську мову</p>
+                            <a href=""class="news-button button-gray">Детальніше</a>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="bg-circle bg-circle__news"></span>
                     </div>
                 </div>
             </section>
         </div>
     </div>
     
-    <footer>
-        <div class="footer-elements">
-            <div class="footer-content">
-                <div class="footer-lists">
-                    <div class="footer-content__list">
-                        <h5>Контакти</h5>
-                        <div class="list__items footer-list__items">
-                            <ion-icon name="call"></ion-icon>
-                            <p>Телефон: <a href="tel:+380957192906">+380957192906</a></p>
-                        </div>
-                        <div class="list__items footer-list__items">
-                            <ion-icon name="mail"></ion-icon>
-                            <p>Пошта: <a href="mailto:support@favorite-english.com">support@favorite-english.com</a></p>
-                        </div>
-                    </div>
-                    <div class="footer-content__lists">
-                        <div class="footer-content__list footer-list__items">
-                            <h5>Категорії</h5>
-                            <a href="#">Відгуки</a>
-                        </div>
-                        <div class="footer-content__list footer-list__items">
-                            <h5>Посилання</h5>
-                            <a href="#">Про нас</a>
-                            <a href="#">Блог</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-content__search">
-                    <p>Будь в курсі бонусів, скидок та інших новин. Підпишись на розсилку залишивши свою пошту нижче</p>
-                    <div>
-                        <input class="input-search" placeholder="Email" type="search">
-                        <ion-icon name="send" class="button btn-mini footer-content__button"></ion-icon>
-                    </div>
-                </div>
-            </div>    
+    <div class="footer">
+        <div class="footer-content">
+            <img src="../images/Instagram.svg" alt="">
+            <img src="../images/TikTok.svg" alt="">
         </div>
-    </footer>
+    </div>
 
     <script src="../js/personal.js"></script>
 </body>
