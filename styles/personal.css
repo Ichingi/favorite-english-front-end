@@ -83,10 +83,6 @@
         min-height: 190px;
     }
 }
-@media(max-width:840px) {
-    .lessons-image {
-    }
-}
 @media(max-width:740px) {
     .lessons-image img{
         width: 150px !important;
@@ -212,12 +208,7 @@
         -o-border-radius: 12px !important;
     }
 }
-.grey {
-    color: #626262;
-}
-.blue {
-    color: #385BD2;
-}
+
 .img-icon {
     width: 37px;
 }
@@ -235,7 +226,6 @@ header {
 }
 .personal-body .container {
     width: 61%;
-
 }
 .personal-body {
     background-color: #EEEFF0;
@@ -445,6 +435,7 @@ header {
     justify-content: space-between;
 }
 .main-cards__card {
+    color: #626262;
     display: flex;
     gap: 3px;
     align-items: center;
@@ -499,7 +490,7 @@ header {
 .progress-bar {
     width: 100%; 
     height: 1px;
-    background-color: #385BD2;
+    background-color: var(--var-primary);
 }
 .chat-teacher__info {
     width: 100%;
@@ -583,20 +574,6 @@ header {
     flex-direction: column;
     gap: 10px;
 }
-.button-lessons {
-    width: 70%;
-    padding: 12px 35px;
-}
-.button-gray {
-    background-color: #EFF2FB;
-    color: #385BD2;
-    text-align: center;
-    border-radius: 14px;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    -ms-border-radius: 14px;
-    -o-border-radius: 14px;
-}
 .news {
     padding: 30px 50px;
     background-color: #FFFFFF;
@@ -622,13 +599,19 @@ header {
     font-size: 21px;
 }
 .news-content {
-    font-weight: 300;
-    font-size: 16px;
+    display: flex;
+    align-items: center;
 }
-.news-text {
+.news-text, .news-text-content {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+.news-text {
+    gap: 15px;
+}
+.news-text-content {
+    gap: 5px;
 }
 .bg-circle__news {
     width: 120px;
@@ -641,8 +624,8 @@ header {
 }
 .main-left__card {
     background-color: #f5f7fb;
-    border: 1.3px dashed #385BD2;
-    color: #385BD2;
+    border: 1.3px dashed var(--var-primary);
+    color: var(--var-primary);
     cursor: pointer;
 }
 .footer {

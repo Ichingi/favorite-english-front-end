@@ -33,6 +33,14 @@ table {border-collapse: collapse; border-spacing: 0;}
     color: black;
 }
 
+.grey {
+    color: #626262;
+}
+
+.blue {
+    color: var(--var-primary);
+}
+
 body {
     position: relative;
     min-height: 100%;
@@ -434,12 +442,12 @@ nav {
     -ms-transform: scale(98%);
     -o-transform: scale(98%);
 }
-.btn-transparrent {
+.btn-transparent {
+    background-color: #EFF2FB;
     color: var(--var-primary);
-    background-color: transparent;
 }
-.btn-transparrent:hover {
-    background-color: transparent;
+.btn-transparent:hover {
+    background-color: #EFF2FB;
 }
 .btn-red {
     background-color: #D2385F;
@@ -450,6 +458,12 @@ nav {
 .btn-mini {
     padding: 16px;
     width: revert-layer;
+}
+.btn-big {
+    padding: 19px 76px;
+}
+.w-auto {
+    width: auto;
 }
 main {
     position: relative;

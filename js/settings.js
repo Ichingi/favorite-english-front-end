@@ -5,7 +5,7 @@ const passwordField = document.getElementById('password');
 const userDataContent = document.querySelector('.user-data__content');
 const interestsItems = document.querySelectorAll('.interests-card');
 
-passwordEditIcon.addяEventListener('click', function () {
+passwordEditIcon.addEventListener('click', function () {
     let confirmPasswordField = document.querySelector('.confirm-password');
 
     if (!passwordField.hasAttribute('disabled')) {
