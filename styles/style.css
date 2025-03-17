@@ -27,6 +27,7 @@ table {border-collapse: collapse; border-spacing: 0;}
     --var-primary: #385AD2;
     --var-primary-light: #4f71ee;
     --var-primary-extra-light: #c8d1ee;
+    --var-primary-transparent: #EFF2FB;
 }
 ::selection {
     background: var(--var-primary-extra-light);
@@ -39,6 +40,18 @@ table {border-collapse: collapse; border-spacing: 0;}
 
 .blue {
     color: var(--var-primary);
+}
+
+.black {
+    color: black !important;
+}
+
+.bg-blue {
+    background-color: var(--var-primary) !important;
+}
+
+.bg-blue-transparent {
+    background-color: var(--var-primary-transparent) !important;
 }
 
 body {
@@ -56,12 +69,28 @@ body {
 }
 @media(max-width:1930px){
     .price-cards {
-        width: 49% !important;
+        width: 55% !important;
     }
 }
 @media(max-width:1530px){
     .container {
         width: 80% !important;
+    }
+}
+@media(max-width:1410px){
+    .price-privileges, .price-button {
+        display: none;
+    }
+    .price {
+        gap: 31px !important;
+        flex-direction: column;
+    }
+    .price-content {
+        width: 100% !important;
+    }
+    .price-cards {
+        margin: 0 auto;
+        width: 100% !important;
     }
 }
 @media(max-width:1200px){
@@ -110,16 +139,6 @@ body {
     /* .price-content {
         display: none;
     } */
-    .price-privileges, .price-button {
-        display: none;
-    }
-    .price {
-        gap: 31px !important;
-        flex-direction: column;
-    }
-    .price-content {
-        width: 100% !important;
-    }
     .nav__items {
         display: none !important;
         flex-direction: column;
@@ -144,20 +163,6 @@ body {
     .slider {
         margin: 75px 0 !important;
     }
-    .price {
-        margin: 75px auto !important;
-    }
-    .price-cards {
-        margin: 0 auto;
-        width: 100% !important;
-    }
-    .price-card {
-        width: 80% !important;
-    }
-    .right-card {
-        position: relative !important;
-        top: 45px;
-    }
 }
 @media(max-width:920px){
     .doings {
@@ -169,6 +174,11 @@ body {
 @media(max-width:784px){
     .test-proposition {
         width: 100% !important;
+    }
+}
+@media(max-width:735px){
+    .price-card {
+        max-width: 100% !important;
     }
 }
 @media(max-width:680px){
@@ -236,6 +246,12 @@ body {
 
     .modal-content {
         width: 280px !important;
+    }
+
+    .price-card-big .prices {
+        row-gap: 25px;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media(max-width:456px){
@@ -409,6 +425,7 @@ nav {
 
 .buttons {
     display: flex;
+    gap: 5px;
 }
 .btn-icon {
     display: flex;
@@ -443,11 +460,11 @@ nav {
     -o-transform: scale(98%);
 }
 .btn-transparent {
-    background-color: #EFF2FB;
+    background-color: var(--var-primary-transparent);
     color: var(--var-primary);
 }
 .btn-transparent:hover {
-    background-color: #EFF2FB;
+    background-color: var(--var-primary-transparent);
 }
 .btn-red {
     background-color: #D2385F;
@@ -684,7 +701,7 @@ main {
     font-size: 21px;
 }
 .test-proposition__title__blue {
-    color: #385AD2;
+    color: var(--var-primary);
 }
 .test-proposition_subtitle {
     line-height: 31.8px;
@@ -757,6 +774,7 @@ main {
     font-size: 30px;
 }
 .price {
+    align-items: center;
     gap: 100px;
     width: 80%;
     margin-top: 160px;
@@ -764,7 +782,7 @@ main {
     display: flex;
 }
 .price-content {
-    width: 40%;
+    width: 32%;
 }
 .price-lessons__info {
     display: flex;
@@ -800,19 +818,29 @@ main {
     font-size: 21px;
 }
 .price-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
     width: 60%;
     position: relative;
 }
 .price-card {
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 37%;
     background: #FFFFFF;
-    padding: 50px;
+    padding: 38px;
     border-radius: 22px;
     -webkit-border-radius: 22px;
     -moz-border-radius: 22px;
     -ms-border-radius: 22px;
     -o-border-radius: 22px;
-    box-shadow: 0px 4px 91.5px -3px #00000021;
+    box-shadow: 0px 4px 91.5px -3px #00000008;
+}
+.price-card-big {
+    max-width: 100%;
 }
 .price-card__lessons {
     margin-top: 30px;
@@ -853,14 +881,7 @@ main {
 }
 .card-feature {
     color: #696968;
-}
-.price-card__lessons__right {
-    background-color: #385AD2;
-}
-.right-card {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+    line-height: 150%;
 }
 footer {
     position: absolute;
