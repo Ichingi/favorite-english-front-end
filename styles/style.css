@@ -242,9 +242,7 @@ body {
   }
 
   .footer-content__button-wrapper {
-    /* padding: 8.2px 0px; */
-
-    height: 100% !important;
+    align-self: stretch;
   }
 }
 @media (max-width: 960px) {
@@ -1044,7 +1042,7 @@ footer a {
   background-color: #fff;
   border-radius: 0 15px 15px 0;
   padding-right: 10px;
-  height: 100%;
+  align-self: stretch;
   display: flex;
   align-items: center;
 }
@@ -1054,11 +1052,11 @@ footer a {
   align-items: center;
 }
 
-.footer-content__search input {
+/* .footer-content__search input {
 }
 .footer-content__search > div {
   /* position: relative; */
-}
+/* } */
 .footer-content__search > p {
   line-height: 19px;
   font-size: 15px;
