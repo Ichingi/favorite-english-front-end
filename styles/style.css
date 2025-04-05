@@ -296,6 +296,14 @@ body {
     width: 100% !important;
   }
 
+  .logo img {
+    width: 50px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
   .footer-content {
     gap: 35px;
   }
@@ -504,6 +512,15 @@ nav {
   align-items: center;
   /* width: 80%; */
   margin: 30px auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 400;
 }
 
 .nav__item {
