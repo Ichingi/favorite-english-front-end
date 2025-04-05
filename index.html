@@ -11,7 +11,7 @@
         <div class="container">
             <header>
                 <nav>
-                    <div class="menu">
+                    <!-- <div class="menu">
                         <div class="menu-icon" onclick="toggleMenu()">☰</div>
                         <ul class="nav__items">
                             <li class="nav__item"><a href="">Головна</a></li>
@@ -19,11 +19,15 @@
                             <li class="nav__item"><a href="">Про платформу</a></li>
                             <li class="nav__item"><a href="">Контакти</a></li>
                         </ul>
-                    </div>
+                    </div> -->
+                   
+                    
+                        <a href="#" class="logo"><img src="./images/only-logo.svg" alt="logo"> <span>Favorite English</span></a>
                     <div class="buttons">
                         <a onclick="openModal('registration')" href="#" class="button btn-adaptive">Зареєструватися</a>
                         <a onclick="openModal('login')" href="#" class="button btn-transparent btn-adaptive">Увійти</a>
                     </div>
+                    
                 </nav>
             </header>
             <main>
@@ -240,35 +244,32 @@
     <footer>
         <div class="footer-elements">
             <div class="footer-content">
-                <div class="footer-lists">
-                    <div class="footer-content__list">
-                        <h5>Контакти</h5>
-                        <div class="list__items footer-list__items">
-                            <ion-icon name="call"></ion-icon>
-                            <p>Телефон: <a href="tel:+380957192906">+380957192906</a></p>
-                        </div>
-                        <div class="list__items footer-list__items">
-                            <ion-icon name="mail"></ion-icon>
-                            <p>Пошта: <a href="mailto:support@favorite-english.com">support@favorite-english.com</a></p>
-                        </div>
+                <div class="footer-content__list">
+                    <h5>Контакти</h5>
+                    <div class="list__items footer-list__items">
+                        <ion-icon name="call"></ion-icon>
+                        <p>Телефон: <a href="tel:+380957192906">+380957192906</a></p>
                     </div>
-                    <div class="footer-content__lists">
-                        <div class="footer-content__list footer-list__items">
-                            <h5>Категорії</h5>
-                            <a href="#">Відгуки</a>
-                        </div>
-                        <div class="footer-content__list footer-list__items">
-                            <h5>Посилання</h5>
-                            <a href="#">Про нас</a>
-                            <a href="#">Блог</a>
-                        </div>
+                    <div class="list__items footer-list__items">
+                        <ion-icon name="mail"></ion-icon>
+                        <p>Пошта: <a href="mailto:support@favorite-english.com">support@favorite-english.com</a></p>
                     </div>
                 </div>
+                <div class="footer-content__list">
+                    <h5>Соціальні мережі</h5>
+                    <div class="footer-content__box">
+                        <a href="https://www.instagram.com/favorite.english.school/" target="_blank" class="footer-content__instagram footer-content__links"><img src="./icons/logo-instagram.svg" alt="instagram logo"></a>
+                        <a href="https://www.tiktok.com/@favorite.english.school" target="_blank" class="footer-content__tiktok footer-content__links">
+                        <img src="./icons/logo-tiktok.svg" alt="tiktok logo"></a>
+                    </div>
+                </div>      
                 <div class="footer-content__search">
-                    <p>Будь в курсі бонусів, скидок та інших новин. Підпишись на розсилку залишивши свою пошту нижче</p>
-                    <div>
+                    <p>Підписка на розсилку</p>
+                    <div class="footer-content__search-box">
                         <input class="input-search" placeholder="Email" type="search">
-                        <ion-icon name="send" class="button btn-mini footer-content__button"></ion-icon>
+                        <div class="footer-content__button-wrapper">
+                            <button type="submit"  class="button btn-mini footer-content__button">Підписатися</button>
+                        </div>
                     </div>
                 </div>
             </div>    
