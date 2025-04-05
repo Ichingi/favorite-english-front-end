@@ -1052,19 +1052,11 @@ footer a {
   align-items: center;
 }
 
-/* .footer-content__search input {
-}
-.footer-content__search > div {
-  /* position: relative; */
-/* } */
 .footer-content__search > p {
   line-height: 19px;
   font-size: 15px;
 }
 .footer-content__button {
-  /* position: absolute;
-  top: 11px;
-  right: 11px; */
   padding: 10px 16px;
   border-radius: 10px;
   background-color: #000;
@@ -1088,9 +1080,6 @@ footer a {
   width: 100%;
   gap: 6px;
 }
-
-/* .footer-content__list {
-} */
 
 .footer-content__links {
   display: flex;
